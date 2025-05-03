@@ -139,7 +139,7 @@ const ContactPage = () => {
               <Mail className="h-5 w-5 mt-1 text-primary flex-shrink-0" />
               <div>
                 <h3 className="font-medium text-foreground">Email</h3>
-                <p>Palvinder.singh@cognivanta.placeholder.com</p>
+                <p>info@cognivanta.com</p>
               </div>
             </div>
           </div>
