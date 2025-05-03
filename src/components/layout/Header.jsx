@@ -22,7 +22,7 @@ const Header = () => {
     >
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
       <Link to="/" className="flex items-center space-x-2">
-        <img src="src\logo.png" alt="Logo" className="h-12 w-auto" />
+        <img src="./logo.png" alt="Logo" className="h-12 w-auto" />
         <span className="font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
         </span>
         </Link>
