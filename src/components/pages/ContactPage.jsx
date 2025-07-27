@@ -52,7 +52,22 @@ export default function ContactPage() {
         <motion.div initial={{ opacity:0,x:50 }} animate={{ opacity:1,x:0 }} transition={{ duration:0.8, delay:0.2 }} className="space-y-8">
           <div><h2 className="text-3xl font-bold text-white mb-8">Contact Information</h2>
             {[
-              { icon: <MapPin />, title: 'Address', info: '2010, GBP Crest, Kharar, Mohali' },
+              {
+  icon: <MapPin />,
+  title: 'Address',
+  info: (
+    <>
+      Cognivanta Singapore Pte. Ltd.<br />
+      Level 39, Marina Bay Financial Centre Tower 2<br />
+      10 Marina Boulevard, Singapore 018983<br />
+      Republic of Singapore<br /><br />
+      
+      Plot No. C‑36, Industrial Area Phase 2<br />
+      Sector 58, Mohali, Punjab 160055<br />
+      India
+    </>
+  )
+},
               { icon: <Phone />, title: 'Phone', info: '+91 9899478431' },
               { icon: <Mail />, title: 'Email', info: 'info@cognivanta.com' }
             ].map((c,i)=>(
