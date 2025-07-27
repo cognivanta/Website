@@ -125,7 +125,14 @@ const ContactPage = () => {
               <MapPin className="h-5 w-5 mt-1 text-primary flex-shrink-0" />
               <div>
                 <h3 className="font-medium text-foreground">Address</h3>
-                <p>2010, GBP Crest , Kharar, Mohali</p>
+                <p>Cognivanta Singapore Pte. Ltd.
+                  Level 39, Marina Bay Financial Centre Tower 2
+                  10 Marina Boulevard
+                  Singapore 018983
+                  Republic of Singapore</p>
+                <p>Plot No. C‑36, Industrial Area Phase 2, Sector 58
+                    Mohali, Punjab 160055
+                    India</p>  
               </div>
             </div>
             <div className="flex items-start space-x-3">
