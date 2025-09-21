@@ -62,8 +62,8 @@ export default function ContactPage() {
       10 Marina Boulevard, Singapore 018983<br />
       Republic of Singapore<br /><br />
       
-      Plot No. C‑36, Industrial Area Phase 2<br />
-      Sector 58, Mohali, Punjab 160055<br />
+      H.no.B006/00798/5, Noor Villa, Kharar<br />
+      Punjab 140301<br />
       India
     </>
   )
