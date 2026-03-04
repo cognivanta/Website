@@ -1,11 +1,12 @@
-import './App.css'
+import type React from 'react'
+import HomePage from './pages/HomePage'
 
-function App() {
+const App: React.FC = () => {
 
   return (
-    <>
-      hello world
-    </>
+    <div className="min-h-screen w-full">
+      <HomePage />
+    </div>
   )
 }
 

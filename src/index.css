@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@theme {
+  --color-background: #dbd1c3;
+  --color-hovernavlink: #7467FF;
+}
+
+@tailwind utilities;
