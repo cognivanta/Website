@@ -3,6 +3,41 @@
 @theme {
   --color-background: #dbd1c3;
   --color-hovernavlink: #7467FF;
+  --font-zeist: "Zeist";
+  --font-sans: "Zeist", Arial, sans-serif;
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Geist';
+    src: url('./assets/fonts/zeist/Geist[wght].woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* Italic Variable Font (Weights 100-900) */
+  @font-face {
+    font-family: 'Geist';
+    src: url('./assets/fonts/zeist/Geist-Italic[wght].woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+  }
+
+
+  html {
+    /* Apply the default font to the whole document */
+    @apply font-sans;
+  }
+}
+
+
+@utility container {
+  margin-inline: auto;   /* Equivalent to mx-auto */
+  padding-inline: 2rem;
+  width: 100%;
 }
 
 @tailwind utilities;
+
