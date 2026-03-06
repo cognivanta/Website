@@ -8,11 +8,11 @@ type NavLinkProps = {
 
 const NavBar: React.FC = () => {
   const NAV_LINKS = [
-    { label: "About",     href: "#about" },
+    { label: "About", href: "#about" },
     { label: "Expertise", href: "#expertise" },
-    { label: "Services",  href: "#services" },
-    { label: "Contact",   href: "/contact" },
-    { label: "Open Jobs", href: "https://brix-it.factorialhr.pt/", external: true },
+    { label: "Services", href: "#services" },
+    { label: "Contact", href: "/contact" },
+    { label: "Open Jobs", href: "/career", external: true },
   ];
 
   const [visible, setVisible] = useState(true);
@@ -21,7 +21,7 @@ const NavBar: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY < 10) {
+      if (currentScrollY < 5) {
         setVisible(true);
       } else if (currentScrollY > lastScrollY.current) {
         setVisible(false); // scrolling down
@@ -36,18 +36,18 @@ const NavBar: React.FC = () => {
   }, []);
 
 
-  const NavLink: React.FC<NavLinkProps> = ({label, href}) => {
-    return(
+  const NavLink: React.FC<NavLinkProps> = ({ label, href }) => {
+    return (
       <a
-      href={href}
-      className="group inline-flex flex-col overflow-hidden text-[1rem] h-[1.15em] leading-[1.15em] no-underline text-neutral-900"
+        href={href}
+        className="group inline-flex flex-col overflow-hidden text-[1rem] h-[1.15rem] leading-[1.15rem] no-underline text-neutral-900"
       >
         <span
           className="flex font-normal tracking-wide uppercase whitespace-nowrap
                      transition-transform duration-300 ease-[cubic-bezier(0.76,0,0.24,1)]
                      group-hover:-translate-y-full"
         >
-          { label }
+          {label}
         </span>
         <span
           className="flex font-normal tracking-wide uppercase whitespace-nowrap text-hovernavlink
@@ -65,20 +65,22 @@ const NavBar: React.FC = () => {
     <>
       {/* Nav bar */}
       <header
-        className="fixed inset-x-0 top-0 z-50 border-0 bg-background transition-transform duration-500 ease-in-out"
-        style={{ transform: visible ? 'translateY(0)' : 'translateY(-100%)' }}
+        className={`sticky w-full inset-x-0 z-50 border-0 bg-background h-18
+        transition-transform duration-400 delay-100 ease-in-out
+        ${visible ? "translate-y-0" : "-translate-y-100"}
+        `}
 
       >
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-24">
-          <div className="flex items-center justify-between h-[68px] gap-8">
+        <div className="section-padding">
+          <div className="flex items-center justify-between gap-8 pt-5">
 
             {/* Logo */}
-            <a href="/" className="relative w-[105px] shrink-0 text-neutral-900 no-underline">
+            <a href="/" className="relative w-12 shrink-0 text-neutral-900 no-underline">
               <img src={logo} />
             </a>
 
             {/* Desktop Navlinks */}
-            <div className="hidden lg:flex items-center gap-8">
+            <div className="hidden lg:flex items-center">
               <ul className="flex items-center list-none gap-7">
                 {NAV_LINKS.map((link) => (
                   <NavLink key={link.label} label={link.label} href={link.href} />
