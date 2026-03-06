@@ -23,7 +23,7 @@ const AboutSection: React.FC = () => {
         />
 
         <div>
-          <div className="uppercase sm:text-4xl text-3xl md:4xl text-left break-words">
+          <div className="uppercase sm:text-4xl text-3xl md:4xl text-left break-words font-semibold">
             <p>Deep Market</p>
             <p>Expertise,</p>
             <p>Real-World Impact.</p>
@@ -57,7 +57,7 @@ const AboutSection: React.FC = () => {
         />
 
         <div>
-          <div className="uppercase sm:text-4xl text-3xl md:4xl text-left break-words">
+          <div className="uppercase sm:text-4xl text-3xl md:4xl text-left break-words font-bold">
             <p>Deep Market</p>
             <p>Expertise,</p>
             <p>Real-World Impact.</p>
