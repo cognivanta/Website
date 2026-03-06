@@ -2,7 +2,7 @@ import React from 'react'
 import NavBar from '../components/navigation/NavBar'
 import Hero from '../components/sections/home/Hero'
 import AboutSection from '../components/sections/home/AboutSection'
-import FeatureSection from '../components/sections/home/ExpertisesSection'
+import ExpertiseSection from '../components/sections/home/ExpertiseSection'
 
 const HomePage: React.FC = () => {
 
@@ -11,7 +11,7 @@ const HomePage: React.FC = () => {
       <NavBar />
       <Hero />
       <AboutSection />
-      <FeatureSection />
+      <ExpertiseSection />
     </div>
   )
 }

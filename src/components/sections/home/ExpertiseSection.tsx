@@ -38,13 +38,61 @@ const Hero: React.FC = () => {
   )
 }
 
-const ExpertisesSection: React.FC = () => {
+const ExpertiseSection: React.FC = () => {
 
   return (
     <section id="feature" className="relative flex-col w-full min-h-screen font-sans bg-background section-padding">
-      <Hero />
+      <div className="mt-[5rem]">
+        <Hero />
+
+      </div>
+
+
+      <div className="flex flex-col md:flex-row w-full min-h-screen">
+        {/* side bar */}
+        <div className="sticky bg-red-500 w-full md:w-[25%] hidden md:block">
+          <div className="flex flex-col w-full h-full text-left">
+            <div className="self-start">
+              01/05
+            </div>
+
+            <div className="">
+              <p>text 1 11</p>
+              <p>text 1 11</p>
+              <p>text 1 11</p>
+              <p>text 1 11</p>
+              <p>text 1 11</p>
+            </div>
+
+            <div className="self-end">
+              Get in Touch
+            </div>
+
+          </div>
+        </div>
+
+        {/* list */}
+        <div className="flex bg-green-500 w-full md:w-[50%] min-h-[50vh]">
+          j
+        </div>
+
+        {/* sticky image */}
+        <div className="sticky items-center w-full md:w-[25%] h-[50vh] md:h-screen">
+          <div className="flex items-center justify-center w-full h-full">
+            <video
+              src={video2}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-[70%]"
+            />
+          </div>
+        </div>
+
+      </div>
     </section>
   )
 }
 
-export default ExpertisesSection
+export default ExpertiseSection
