@@ -71,24 +71,26 @@ const ServicesScroll: React.FC = () => {
 
       {/* 1. STICKY SIDEBAR */}
       <div className="sticky top-0 h-screen sm:w-full md:w-1/4 flex flex-col justify-center z-10 bg-background">
-        <div className='flex flex-col w-[90%] h-[80vh]'>
+        <div className='flex flex-col w-[90%] h-[70vh]'>
           {/* Counter */}
-          <div className="text-xl mb-10 self-start">
-            0{activeIndex}/0{sections.length}
+          <div className="flex flex-row text-3xl self-start">
+            <p>0{activeIndex}/</p>
+            <p className="text-lighttext">0{sections.length}</p>
+            {/* 0{activeIndex}/0{sections.length} */}
           </div>
           {/* Anchor Links */}
-          <div className="hidden md:flex flex-col gap-4 flex-grow">
+          <div className="hidden md:flex flex-col gap-4 mt-auto mb-[5rem]">
             {sections.map((sec) => (
               <div
                 key={sec.id}
-                className={`transition-opacity duration-300 ${activeIndex === sec.id ? 'opacity-100' : 'opacity-20'}`}
+                className={`font-nobile transition-opacity duration-300 ${activeIndex === sec.id ? 'opacity-100' : 'opacity-20'}`}
               >
                 {sec.title}
               </div>
             ))}
           </div>
           {/* Get In Touch Button */}
-          <div className='w-full bg-headline text-gray-50 mt-auto py-3'>
+          <div className='w-full bg-headline text-text-inverse py-3'>
             <button className='w-full uppercase text-center font-bold'>get in touch</button>
           </div>
         </div>
@@ -119,7 +121,7 @@ const ServicesScroll: React.FC = () => {
       <div className="hidden md:flex justify-center items-center sticky top-0 h-screen w-1/4">
         <video
           src={video2}
-          className="w-[90%] h-[80%] object-cover"
+          className="w-[90%] h-[70%] object-cover"
           autoPlay loop muted playsInline
         />
       </div>
