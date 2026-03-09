@@ -65,7 +65,7 @@ const NavBar: React.FC = () => {
     <>
       {/* Nav bar */}
       <header
-        className={`sticky w-full inset-x-0 z-50 border-0 bg-background h-18
+        className={`sticky top-0 w-full inset-x-0 z-50 border-0 bg-background h-18
         transition-transform duration-400 delay-100 ease-in-out
         ${visible ? "translate-y-0" : "-translate-y-100"}
         `}
