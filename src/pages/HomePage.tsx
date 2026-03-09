@@ -5,6 +5,7 @@ import AboutSection from '../components/sections/home/AboutSection'
 import ExpertiseSection from '../components/sections/home/ExpertiseSection'
 import ServicesSection from '../components/sections/home/ServicesSection'
 import JoinTeamSection from '../components/sections/home/JoinTeamSection'
+import Footer from '../components/sections/home/Footer'
 
 const HomePage: React.FC = () => {
 
@@ -16,6 +17,7 @@ const HomePage: React.FC = () => {
       <ExpertiseSection />
       <ServicesSection />
       <JoinTeamSection />
+      <Footer />
     </div>
   )
 }

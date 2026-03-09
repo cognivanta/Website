@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import logo from "../../assets/cognivanta.svg"
+import AnimatedText from '../text/AnimatedText';
 
 type NavLinkProps = {
   label: string;
@@ -40,22 +41,12 @@ const NavBar: React.FC = () => {
     return (
       <a
         href={href}
-        className="group inline-flex flex-col overflow-hidden text-[1rem] h-[1.15rem] leading-[1.15rem] no-underline text-neutral-900"
+        className="group inline-flex flex-col overflow-hidden text-[1rem] h-[1.15rem] leading-[1.15rem] no-underline text-headline hover:text-hovernavlink"
       >
         <span
-          className="flex font-normal tracking-wide uppercase whitespace-nowrap
-                     transition-transform duration-300 ease-[cubic-bezier(0.76,0,0.24,1)]
-                     group-hover:-translate-y-full"
+          className="flex font-normal tracking-wide uppercase whitespace-nowrap"
         >
-          {label}
-        </span>
-        <span
-          className="flex font-normal tracking-wide uppercase whitespace-nowrap text-hovernavlink
-                     transition-transform duration-300 ease-[cubic-bezier(0.76,0,0.24,1)]
-                     group-hover:-translate-y-full"
-          aria-hidden
-        >
-          {label}
+          <AnimatedText text={label} className="text-xs tracking-[0.2em] block" />
         </span>
       </a>
     );
