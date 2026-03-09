@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import video1 from "../../../assets/expertiseSection-video-1.mp4"
 import video2 from "../../../assets/expertiseSection-video-2.mp4"
+import { sections } from './ExpertiseSectionContent';
 
 const heroContant: string = "we have the right solution for you"
-var heroDesWords: string[] = heroContant.split(" ")
+const heroDesWords: string[] = heroContant.split(" ")
 
 const Hero: React.FC = () => {
   return (
@@ -38,59 +39,107 @@ const Hero: React.FC = () => {
   )
 }
 
+
+const ServicesScroll: React.FC = () => {
+  const [activeIndex, setActiveIndex] = useState(1);
+  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  // Intersection Observer to detect which section is in view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Get the index of the visible section and update state
+            const target = entry.target as HTMLElement;
+            setActiveIndex(Number(target.dataset.index));
+          }
+        });
+      },
+      { rootMargin: '-40% 0px -40% 0px' } // Triggers when section is in the middle 20% of screen
+    );
+
+    sectionRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div className="relative flex flex-col md:flex-row bg-background">
+
+      {/* 1. STICKY SIDEBAR */}
+      <div className="sticky top-0 h-screen sm:w-full md:w-1/4 flex flex-col justify-center z-10 bg-background">
+        <div className='flex flex-col w-[90%] h-[80vh]'>
+          {/* Counter */}
+          <div className="text-xl mb-10 self-start">
+            0{activeIndex}/0{sections.length}
+          </div>
+          {/* Anchor Links */}
+          <div className="hidden md:flex flex-col gap-4 flex-grow">
+            {sections.map((sec) => (
+              <div
+                key={sec.id}
+                className={`transition-opacity duration-300 ${activeIndex === sec.id ? 'opacity-100' : 'opacity-20'}`}
+              >
+                {sec.title}
+              </div>
+            ))}
+          </div>
+          {/* Get In Touch Button */}
+          <div className='w-full bg-headline text-gray-50 mt-auto py-3'>
+            <button className='w-full uppercase text-center font-bold'>get in touch</button>
+          </div>
+        </div>
+      </div>
+
+      {/* 2. SCROLLING CONTENT */}
+      <div className="w-1/2 relative z-10 pb-[50vh]">
+        {sections.map((sec, i) => (
+          <div
+            key={sec.id}
+            data-index={sec.id}
+            ref={el => { sectionRefs.current[i] = el; }}
+            className="min-h-screen flex flex-col justify-center p-10 border-b-2 border-border"
+          >
+            <h2 className="text-4xl font-bold uppercase mb-6">{sec.title}</h2>
+            <div className="flex flex-col gap-4 font-nobile">
+              {sec.content.map((paragraph, index) => (
+                <p key={index} className="text-xl max-w-lg">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* 3. STICKY BACKGROUND VIDEO */}
+      <div className="hidden md:flex justify-center items-center sticky top-0 h-screen w-1/4">
+        <video
+          src={video2}
+          className="w-[90%] h-[80%] object-cover"
+          autoPlay loop muted playsInline
+        />
+      </div>
+
+    </div>
+  );
+}
+
+
 const ExpertiseSection: React.FC = () => {
 
   return (
     <section id="feature" className="relative flex-col w-full min-h-screen font-sans bg-background section-padding">
       <div className="mt-[5rem]">
         <Hero />
-
       </div>
+      <ServicesScroll />
 
 
-      <div className="flex flex-col md:flex-row w-full min-h-screen">
-        {/* side bar */}
-        <div className="sticky bg-red-500 w-full md:w-[25%] hidden md:block">
-          <div className="flex flex-col w-full h-full text-left">
-            <div className="self-start">
-              01/05
-            </div>
 
-            <div className="">
-              <p>text 1 11</p>
-              <p>text 1 11</p>
-              <p>text 1 11</p>
-              <p>text 1 11</p>
-              <p>text 1 11</p>
-            </div>
-
-            <div className="self-end">
-              Get in Touch
-            </div>
-
-          </div>
-        </div>
-
-        {/* list */}
-        <div className="flex bg-green-500 w-full md:w-[50%] min-h-[50vh]">
-          j
-        </div>
-
-        {/* sticky image */}
-        <div className="sticky items-center w-full md:w-[25%] h-[50vh] md:h-screen">
-          <div className="flex items-center justify-center w-full h-full">
-            <video
-              src={video2}
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="w-full h-[70%]"
-            />
-          </div>
-        </div>
-
-      </div>
     </section>
   )
 }
