@@ -1,3 +1,6 @@
+import video1 from '../../../assets/expertiseSection-video-1.mp4'
+import video2 from '../../../assets/expertiseSection-video-2.mp4'
+
 export interface ServiceData {
     id: string
     tag: string
@@ -7,6 +10,7 @@ export interface ServiceData {
     desc1: string
     desc2: string
     theme: 'dark' | 'brand' | 'light'
+    video?: string // for no video just leave the field empty
 }
 
 export const servicesData: ServiceData[] = [
@@ -19,6 +23,7 @@ export const servicesData: ServiceData[] = [
         desc1: "Integrate highly skilled IT professionals directly into your teams.",
         desc2: "Ensure seamless collaboration, enhanced operational efficiency, and specialized technical expertise aligned with your business objectives.",
         theme: "dark",
+        video: "",
     },
     {
         id: "02",
@@ -29,6 +34,7 @@ export const servicesData: ServiceData[] = [
         desc1: "We provide flexible, scalable teams tailored to your project requirements.",
         desc2: "Our TaaS model delivers the agility and depth of knowledge you need, without the constraints of long-term commitments, enabling faster and more adaptive project execution.",
         theme: "brand",
+        video: video1,
     },
     {
         id: "03",
@@ -39,6 +45,7 @@ export const servicesData: ServiceData[] = [
         desc1: "We take full responsibility for the management and operation of your IT systems.",
         desc2: "Allowing your internal teams to focus on core business activities while our proactive approach ensures system performance, scalability, and continuous optimization.",
         theme: "light",
+        video: "",
     },
     {
         id: "04",
@@ -49,6 +56,7 @@ export const servicesData: ServiceData[] = [
         desc1: "We deliver end-to-end IT projects with clearly defined scopes, timelines, and deliverables.",
         desc2: "Ensure seamless collaboration, enhanced operational efficiency, and specialized technical expertise aligned with your business objectives.",
         theme: "dark",
+        video: "",
     },
     {
         id: "05",
@@ -59,6 +67,7 @@ export const servicesData: ServiceData[] = [
         desc1: "Strengthen your internal capabilities with dedicated, high-performing teams tailored to your needs.",
         desc2: "Our adaptive model ensures seamless collaboration and long-term continuity, supporting your growth over time.",
         theme: "brand",
+        video: "",
     },
     {
         id: "06",
@@ -69,5 +78,6 @@ export const servicesData: ServiceData[] = [
         desc1: "More than just executing projects, we position ourselves as strategic partners, supporting the definition of IT strategies",
         desc2: "the implementation of innovation initiatives, and the continuous evolution of digital capabilities.",
         theme: "light",
+        video: video2,
     }
 ]
