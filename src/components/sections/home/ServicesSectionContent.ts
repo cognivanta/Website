@@ -1,5 +1,5 @@
-import video1 from '../../../assets/expertiseSection-video-1.mp4'
-import video2 from '../../../assets/expertiseSection-video-2.mp4'
+import video2 from '../../../assets/serviceSection-video-2.mp4'
+import video6 from '../../../assets/serviceSection-video-6.mp4'
 
 export interface ServiceData {
     id: string
@@ -34,7 +34,7 @@ export const servicesData: ServiceData[] = [
         desc1: "We provide flexible, scalable teams tailored to your project requirements.",
         desc2: "Our TaaS model delivers the agility and depth of knowledge you need, without the constraints of long-term commitments, enabling faster and more adaptive project execution.",
         theme: "brand",
-        video: video1,
+        video: video2,
     },
     {
         id: "03",
@@ -78,6 +78,6 @@ export const servicesData: ServiceData[] = [
         desc1: "More than just executing projects, we position ourselves as strategic partners, supporting the definition of IT strategies",
         desc2: "the implementation of innovation initiatives, and the continuous evolution of digital capabilities.",
         theme: "light",
-        video: video2,
+        video: video6,
     }
 ]
