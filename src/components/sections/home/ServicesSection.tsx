@@ -59,7 +59,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ data, index, totalCount, prev
             <WaveSVG waveColor={waveColor} prevWaveBg={prevWaveBg} flip={index % 2 !== 0} />
 
             {/* The outer div has the background colors and takes up the remaining height */}
-            <div className={`${bgContent} ${textColor} w-full flex-grow flex flex-col items-center z-10 overflow-hidden`}>
+            <div className={`${bgContent} ${textColor} -mt-0.5 w-full flex-grow flex flex-col items-center z-10 overflow-hidden`}>
 
                 {/* Inner container limits width to 1440px and adds padding/centering */}
                 <div className="section-padding w-full h-full flex flex-col justify-start pb-12 sm:pb-24 overflow-y-auto">
