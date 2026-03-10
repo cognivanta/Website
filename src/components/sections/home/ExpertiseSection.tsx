@@ -90,7 +90,7 @@ const ServicesScroll: React.FC = () => {
             ))}
           </div>
           {/* Get In Touch Button */}
-          <div className='sm:self-end md:w-fit sm:w-full bg-headline text-text-inverse py-3 px-6 md:px-0'>
+          <div className='sm:self-end flex items-center justify-center md:w-full sm:w-fit bg-headline text-text-inverse py-3 px-6 md:px-0'>
             <button className='w-fit uppercase text-center font-bold'>get in touch</button>
           </div>
         </div>
