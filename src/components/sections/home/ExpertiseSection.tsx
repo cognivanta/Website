@@ -9,7 +9,7 @@ const heroDesWords: string[] = heroContant.split(" ")
 const Hero: React.FC = () => {
   return (
     <div className="flex flex-col uppercase gap-y-1.5 pb-20 text-center items-center">
-      <p className=" text-sm font-nobile font-light pb-[1rem]">OUR VISION</p>
+      <p className="text-lg md:text-xl font-nobile font-light pb-[1.5rem] tracking-[0.25em] opacity-80">OUR VISION</p>
       <div
         className="md:w-[70%] w-[95%] flex justify-center flex-wrap gap-x-[1rem] uppercase text-4xl
           font-bold"
