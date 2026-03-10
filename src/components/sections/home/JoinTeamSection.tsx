@@ -16,27 +16,11 @@ const JoinTeamSection: React.FC = () => {
                 scrollTrigger: {
                     trigger: containerRef.current,
                     start: "top top",
-                    end: "+=300%", // Controls total scroll duration for the pin
+                    end: "+=150%", // Controls total scroll duration for the pin
                     pin: true,
                     scrub: true, // true binds this 1:1 exactly with no 1-second lag delay
                 }
             });
-
-            // 1. Animate SVG: Scale down from massive and rotate
-            tl.fromTo(svgRef.current,
-                {
-                    opacity: 1,
-                    scale: 6.6,
-                    rotation: 0,
-                },
-                {
-                    opacity: 1,
-                    scale: 0.1,
-                    rotation: 360,
-                    duration: 1,
-                    ease: "none", // 1:1 linear progression with no acceleration/deceleration
-                }
-            );
 
             // 2. Animate Content: Slide up directly bound to scroll
             tl.fromTo(contentRef.current,
@@ -48,7 +32,7 @@ const JoinTeamSection: React.FC = () => {
                     duration: 1,
                     ease: "none", // 1:1 linear progression
                 },
-                "-=0.5" // Overlap with the previous animation - start when scaling is halfway done!
+                 // Overlap with the previous animation - start when scaling is halfway done!
             );
         }, containerRef);
 
@@ -70,16 +54,7 @@ const JoinTeamSection: React.FC = () => {
             </div>
 
             {/* SVG Animation */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-visible">
-                <svg
-                    ref={svgRef}
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 480 480"
-                    className="w-64 h-64 md:w-96 md:h-96 opacity-100 will-change-transform drop-shadow-2xl fill-background"
-                >
-                    <path d="M400 160V80h-80a80 80 0 0 0-160 0H80v80a80 80 0 0 0 0 160v80h80a80 80 0 0 0 160 0h80v-80a80 80 0 0 0 0-160Z" />
-                </svg>
-            </div>
+            
 
             <div ref={contentRef} className="flex flex-col items-center justify-center w-full min-h-[50vh] p-0.5 relative z-10 bg-transparent ">
                 {/* Top details SVG */}
