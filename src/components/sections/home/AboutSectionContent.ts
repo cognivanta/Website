@@ -6,32 +6,26 @@ export const aboutSections = [
         id: 1,
         videoSrc: video1,
         title: [
-            "Deep Market",
+            "Deep IT",
             "Expertise,",
-            "Real-World Impact."
+            "Proven Impact."
         ],
         description: [
-            "Our team brings to the table, several years of hands-on experience",
-            "across the IT landscape, enabling us to respond quickly and deliver",
-            "practical, high-value solutions.",
-            "We operate with technical excellence, agility, and a strong focus on",
-            "business results."
+            "In a landscape where standing still means falling behind, Cognivanta acts as the high-velocity engine for your digital transformation.",
+            "Our powerhouse team of elite developers applies deep technical mastery to dismantle your most complex IT hurdles, moving beyond just building software to engineer measurable competitive advantages."
         ]
     },
     {
         id: 2,
         videoSrc: video2,
         title: [
-            "Deep Market",
-            "Expertise,",
-            "Real-World Impact."
+            "Strategic",
+            "Partnership,",
+            "Accelerated Growth."
         ],
         description: [
-            "Our team brings to the table, several years of hands-on experience",
-            "across the IT landscape, enabling us to respond quickly and deliver",
-            "practical, high-value solutions.",
-            "We operate with technical excellence, agility, and a strong focus on",
-            "business results."
+            "True transformation requires more than just code; it requires alignment. Working closely alongside your team, we automate workflows and streamline fragmented processes to deliver undeniable impact.", 
+            "Together, we reclaim your organization’s most valuable assets—time and capital—and transform them into pure fuel for your continued growth."
         ]
     }
 ];

@@ -77,21 +77,17 @@ const Hero: React.FC = () => {
 
         {/* Description text */}
         <div className="font-nobile flex flex-col gap-1 w-full sm:w-[35%] lg:w-[40%] text-lg sm:text-lg text-subtext sm:text-right lg:text-left leading-[1.5]">
+
           <p>
-            At Cognivanta, we deliver high-quality, specialized technology services
+            At <b>Cognivanta</b>, we empower organizations with <b>next-generation technology solutions</b> that drive transformation, enhance operational excellence, and create sustainable competitive advantage.
           </p>
           <p>
-            tailored to each client’s context and ambition.
+            We design and develop <b>bespoke software solutions</b> that streamline complex processes, optimize resources, reduce costs, and unlock new growth opportunities.
           </p>
           <p>
-            Our approach is flexible, personalized, and rooted in close
+            Our commitment is not just to deliver software — but to <b>deliver measurable business impact</b>.
           </p>
-          <p>
-            collaboration — ensuring we adapt to each challenge with precision
-          </p>
-          <p>
-            and care.
-          </p>
+          
         </div>
       </div>
     </section>

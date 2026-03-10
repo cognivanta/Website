@@ -3,7 +3,7 @@ import video1 from "../../../assets/expertiseSection-video-1.mp4"
 import video2 from "../../../assets/expertiseSection-video-2.mp4"
 import { sections } from './ExpertiseSectionContent';
 
-const heroContant: string = "we have the right solution for you"
+const heroContant: string = "Turning  Imagination  into  Innovation  and  Innovation  into  Global  Impact."
 const heroDesWords: string[] = heroContant.split(" ")
 
 const Hero: React.FC = () => {
