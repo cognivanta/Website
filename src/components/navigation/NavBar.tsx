@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import logo from "../../assets/cognivanta.svg"
 import AnimatedText from '../text/AnimatedText';
+import { useLenis } from 'lenis/react';
 
 type NavLinkProps = {
   label: string;
@@ -9,9 +10,9 @@ type NavLinkProps = {
 
 const NavBar: React.FC = () => {
   const NAV_LINKS = [
-    { label: "About", href: "#about" },
-    { label: "Expertise", href: "#expertise" },
-    { label: "Services", href: "#services" },
+    { label: "About", href: "/#about" },
+    { label: "Expertise", href: "/#expertise" },
+    { label: "Services", href: "/#services" },
     { label: "Contact", href: "/contact" },
     { label: "Open Jobs", href: "/career", external: true },
   ];
@@ -38,9 +39,24 @@ const NavBar: React.FC = () => {
 
 
   const NavLink: React.FC<NavLinkProps> = ({ label, href }) => {
+    const lenis = useLenis();
+
+    const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+      // Check if it's an anchor link and we're on the homepage
+      if (href.startsWith('/#') && window.location.pathname === '/') {
+        const targetId = href.substring(2); // Remove '/#'
+        const element = document.getElementById(targetId);
+        if (element) {
+          e.preventDefault();
+          lenis?.scrollTo(element);
+        }
+      }
+    };
+
     return (
       <a
         href={href}
+        onClick={handleClick}
         className="group inline-flex flex-col overflow-hidden text-[1rem] h-[1.15rem] leading-[1.15rem] no-underline text-headline hover:text-hovernavlink"
       >
         <span

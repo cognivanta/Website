@@ -134,7 +134,7 @@ const ServicesScroll: React.FC = () => {
 const ExpertiseSection: React.FC = () => {
 
   return (
-    <section id="feature" className="relative flex-col w-full min-h-screen font-sans bg-background section-padding">
+    <section id="expertise" className="relative flex-col w-full min-h-screen font-sans bg-background section-padding">
       <div className="mt-[5rem]">
         <Hero />
       </div>
