@@ -97,18 +97,18 @@ const ServicesScroll: React.FC = () => {
       </div>
 
       {/* 2. SCROLLING CONTENT */}
-      <div className="w-1/2 relative z-9 pb-[50vh]">
+      <div className="md:w-1/2 sm:w-fit relative z-9 pb-[50vh]">
         {sections.map((sec, i) => (
           <div
             key={sec.id}
             data-index={sec.id}
             ref={el => { sectionRefs.current[i] = el; }}
-            className="min-h-screen flex flex-col justify-center p-10 border-b-2 border-border"
+            className="min-h-screen flex flex-col justify-center p-4 md:p-10 border-b-2 border-border"
           >
-            <h2 className="text-4xl font-bold uppercase mb-6 text-left">{sec.title}</h2>
+            <p className="text-xl md:text-3xl w-full font-bold uppercase mb-6 text-left">{sec.title}</p>
             <div className="flex flex-col gap-4 font-nobile text-justify">
               {sec.content.map((paragraph, index) => (
-                <p key={index} className="text-xl max-w-lg">
+                <p key={index} className="text-xl">
                   {paragraph}
                 </p>
               ))}
