@@ -70,10 +70,10 @@ const ServicesScroll: React.FC = () => {
     <div className="relative flex flex-col md:flex-row bg-background">
 
       {/* 1. STICKY SIDEBAR */}
-      <div className="sticky top-0 h-screen sm:w-full md:w-1/4 flex flex-col justify-center z-10 bg-background">
-        <div className='flex flex-col w-[90%] h-[70vh]'>
+      <div className="sticky top-0 sm:h-fit md:h-screen py-4 sm:h-fit sm:w-full md:w-1/4 flex sm:flex-col flex-col md:justify-center z-10 bg-background">
+        <div className='sm:self-start flex items-center md:items-stretch justify-between sm:flex-row md:flex-col w-full sm:px-0 md:px-4 md:w-[90%] sm:h-fit md:h-[70vh]'>
           {/* Counter */}
-          <div className="flex flex-row text-3xl self-start">
+          <div className="flex flex-row text-3xl self-start md:self-start">
             <p>0{activeIndex}/</p>
             <p className="text-lighttext">0{sections.length}</p>
             {/* 0{activeIndex}/0{sections.length} */}
@@ -90,14 +90,14 @@ const ServicesScroll: React.FC = () => {
             ))}
           </div>
           {/* Get In Touch Button */}
-          <div className='w-full bg-headline text-text-inverse py-3'>
-            <button className='w-full uppercase text-center font-bold'>get in touch</button>
+          <div className='sm:self-end md:w-fit sm:w-full bg-headline text-text-inverse py-3 px-6 md:px-0'>
+            <button className='w-fit uppercase text-center font-bold'>get in touch</button>
           </div>
         </div>
       </div>
 
       {/* 2. SCROLLING CONTENT */}
-      <div className="w-1/2 relative z-10 pb-[50vh]">
+      <div className="w-1/2 relative z-9 pb-[50vh]">
         {sections.map((sec, i) => (
           <div
             key={sec.id}
