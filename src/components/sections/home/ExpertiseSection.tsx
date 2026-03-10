@@ -9,7 +9,7 @@ const heroDesWords: string[] = heroContant.split(" ")
 const Hero: React.FC = () => {
   return (
     <div className="flex flex-col uppercase gap-y-1.5 pb-20 text-center items-center">
-      <p className=" text-sm font-nobile font-light pb-[1rem]">experties</p>
+      <p className=" text-sm font-nobile font-light pb-[1rem]">OUR VISION</p>
       <div
         className="md:w-[70%] w-[95%] flex justify-center flex-wrap gap-x-[1rem] uppercase text-4xl
           font-bold"
@@ -105,8 +105,8 @@ const ServicesScroll: React.FC = () => {
             ref={el => { sectionRefs.current[i] = el; }}
             className="min-h-screen flex flex-col justify-center p-10 border-b-2 border-border"
           >
-            <h2 className="text-4xl font-bold uppercase mb-6">{sec.title}</h2>
-            <div className="flex flex-col gap-4 font-nobile">
+            <h2 className="text-4xl font-bold uppercase mb-6 text-left">{sec.title}</h2>
+            <div className="flex flex-col gap-4 font-nobile text-justify">
               {sec.content.map((paragraph, index) => (
                 <p key={index} className="text-xl max-w-lg">
                   {paragraph}

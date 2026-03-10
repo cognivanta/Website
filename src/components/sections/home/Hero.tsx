@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Description text */}
-        <div className="font-nobile flex flex-col gap-1 w-full sm:w-[35%] lg:w-[40%] text-lg sm:text-lg text-subtext sm:text-right lg:text-left leading-[1.5]">
+        <div className="font-nobile flex flex-col gap-1 w-full sm:w-[35%] lg:w-[40%] text-lg sm:text-lg text-subtext sm:text-right lg:text-justify leading-[1.5]">
 
           <p>
             At <b>Cognivanta</b>, we empower organizations with <b>next-generation technology solutions</b> that drive transformation, enhance operational excellence, and create sustainable competitive advantage.
