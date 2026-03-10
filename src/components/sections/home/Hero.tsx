@@ -5,7 +5,7 @@ import video2 from '../../../assets/hero-Homepage-video-2.mp4'
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative w-full min-h-screen bg-background flex flex-col lg:justify-between py-6 sm:py-10 section-padding">
+    <section className="relative w-full min-h-screen bg-background flex flex-col md:justify-between py-6 sm:py-10 section-padding">
 
       {/* hero top text */}
       <div className="relative flex flex-col">
@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
         {/* Main headline */}
         <div
           className="flex flex-col font-semibold uppercase text-right
-            text-4xl sm:text-5xl md:text-6xl lg:text-7xl
+            text-4xl sm:text-5xl md:text-6xl md:text-7xl
             text-[#1F1D1E]"
         >
           {/* Row 1: "we [video] Design" */}
@@ -60,23 +60,23 @@ const Hero: React.FC = () => {
       </div>
 
       {/* hero bottom: description + video */}
-      <div className="sticky top-10 flex flex-col-reverse sm:flex-row lg:flex-row-reverse items-start sm:items-center justify-between gap-6 mt-16 sm:mt-0 lg:mt-0 z-10 lg:pt-16 sm:pt-0 md:pt-0 lg:pt-0 pb-24">
+      <div className="sticky top-10 flex flex-col-reverse sm:flex-row md:flex-row-reverse items-start sm:items-center justify-between gap-6 mt-16 sm:mt-0 md:mt-0 z-10 md:pt-16 sm:pt-0 md:pt-0 md:pt-0 pb-24">
 
         {/* Subtext video */}
         {/* Sticky video wrapper */}
-        <div className="lg:w-[32rem] lg:top-24 lg:self-start">
+        <div className="md:w-[32rem] md:top-24 md:self-start">
           <video
             src={subtextVideo}
             autoPlay
             muted
             loop
             playsInline
-            className="w-full h-auto sm:w-[60%] sm:h-[70px] lg:w-[32rem] lg:h-[18rem] object-cover flex-shrink-0"
+            className="w-full h-auto sm:w-[60%] sm:h-[70px] md:w-[32rem] md:h-[18rem] object-cover flex-shrink-0"
           />
         </div>
 
         {/* Description text */}
-        <div className="font-nobile flex flex-col gap-1 w-full sm:w-[35%] lg:w-[40%] text-lg sm:text-lg text-subtext sm:text-right lg:text-justify leading-[1.5]">
+        <div className="font-nobile flex flex-col gap-1 w-full sm:w-[35%] md:w-[40%] text-lg sm:text-lg text-subtext sm:text-right md:text-justify leading-[1.5]">
 
           <p>
             At <b>Cognivanta</b>, we empower organizations with <b>next-generation technology solutions</b> that drive transformation, enhance operational excellence, and create sustainable competitive advantage.
