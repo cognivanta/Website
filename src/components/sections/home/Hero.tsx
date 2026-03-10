@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
         {/* Main headline */}
         <div
           className="flex flex-col font-semibold uppercase text-right
-            text-4xl sm:text-5xl md:text-6xl md:text-7xl
+            text-5xl md:text-8xl
             text-[#1F1D1E]"
         >
           {/* Row 1: "we [video] Design" */}
