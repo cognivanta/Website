@@ -41,7 +41,7 @@ const AboutCard: React.FC<AboutCardProps> = ({ data, index }) => {
       />
 
       <div>
-        <div className="uppercase sm:text-4xl text-3xl md:4xl text-left break-words font-semibold">
+        <div className="uppercase sm:text-4xl text-3xl md:4xl text-center break-words font-semibold">
           {data.title.map((line, i) => (
             <p key={i}>{line}</p>
           ))}

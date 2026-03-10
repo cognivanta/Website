@@ -4,7 +4,9 @@
   --color-background: #dbd1c3;
   --color-border: #cbbfaf;
   --color-headline: #1f1d1e;
+  --color-text-inverse: #f9fafb;
   --color-subtext: rgba(31, 29, 30, 0.8);
+  --color-lighttext: rgba(31, 29, 30, 0.7);
   --color-hovernavlink: #7467FF;
   --font-zeist: "Zeist";
   --font-sans: "Zeist", Arial, sans-serif;
