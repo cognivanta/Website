@@ -42,7 +42,7 @@ const FooterLeft: React.FC = () => {
     <div className="flex-1 flex flex-col wrap-normal">
       <div className="w-fit">
         <h2 className="text-6xl mb-10 font-semibold tracking-tight text-white">
-          cognivanta
+          Cognivanta
         </h2>
 
         <p className="text-sm text-gray-400">At Cognivanta, we don’t just deliver services –</p>
