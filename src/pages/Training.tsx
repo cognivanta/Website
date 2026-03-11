@@ -3,6 +3,7 @@ import CourseCard from '../components/sections/training/CourseCard';
 import { coursesData } from '../components/sections/training/data/CourseData';
 import NavBar from '../components/navigation/NavBar';
 import Footer from '../components/sections/home/Footer';
+import TrainingFeatures from '../components/sections/training/TrainingFeatures';
 
 const Training: React.FC = () => {
     const [scrollY, setScrollY] = useState(0);
@@ -73,6 +74,7 @@ const Training: React.FC = () => {
 
             {/* Courses Grid Container (Flows below wave) */}
             <div className="-mt-0.5 grow w-full relative z-20 transition-colors duration-75" style={{ backgroundColor: svgFillColor }}>
+                <TrainingFeatures />
                 <div id="courses-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                         {coursesData.map((course) => (
