@@ -75,7 +75,26 @@ const Training: React.FC = () => {
             {/* Courses Grid Container (Flows below wave) */}
             <div className="-mt-0.5 grow w-full relative z-20 transition-colors duration-75" style={{ backgroundColor: svgFillColor }}>
                 <TrainingFeatures />
-                <div id="courses-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div id="courses-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+                    <div className="flex flex-col items-center justify-center w-full mb-16">
+                        <div className="flex items-center gap-3 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none" className="text-[#ef7b01] w-5 h-5 md:w-6 md:h-6">
+                                <g opacity="0.9">
+                                    <rect x="23.181" y="18.9905" width="6.13043" height="6.13043" transform="rotate(135 23.181 18.9905)" fill="currentColor" stroke="currentColor" strokeWidth="0.444272"></rect>
+                                    <rect x="13.9886" y="9.7981" width="6.13043" height="6.13043" transform="rotate(135 13.9886 9.7981)" fill="currentColor" stroke="currentColor" strokeWidth="0.444272"></rect>
+                                    <rect x="13.8831" y="18.9905" width="6.13043" height="6.13043" transform="rotate(135 13.8831 18.9905)" fill="currentColor" stroke="currentColor" strokeWidth="0.444272"></rect>
+                                    <rect x="23.181" y="9.69238" width="6.13043" height="6.13043" transform="rotate(135 23.181 9.69238)" fill="currentColor" stroke="currentColor" strokeWidth="0.444272"></rect>
+                                </g>
+                            </svg>
+                            <h2 className="text-xs md:text-sm font-nobile uppercase tracking-widest text-headline font-semibold">Our Courses</h2>
+                        </div>
+                        <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-headline text-center mb-4">
+                            Explore Our Programs
+                        </h3>
+                        <p className="text-lg text-subtext text-center max-w-2xl mx-auto">
+                            Comprehensive training modules designed to help you master the most in-demand industry skills.
+                        </p>
+                    </div>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                         {coursesData.map((course) => (
                             <CourseCard key={course.id} {...course} />
