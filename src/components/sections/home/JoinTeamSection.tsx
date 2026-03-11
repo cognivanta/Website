@@ -7,7 +7,6 @@ gsap.registerPlugin(ScrollTrigger)
 
 const JoinTeamSection: React.FC = () => {
     const containerRef = useRef<HTMLElement>(null);
-    const svgRef = useRef<SVGSVGElement>(null);
     const contentRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -32,7 +31,7 @@ const JoinTeamSection: React.FC = () => {
                     duration: 1,
                     ease: "none", // 1:1 linear progression
                 },
-                 // Overlap with the previous animation - start when scaling is halfway done!
+                // Overlap with the previous animation - start when scaling is halfway done!
             );
         }, containerRef);
 
@@ -54,7 +53,7 @@ const JoinTeamSection: React.FC = () => {
             </div>
 
             {/* SVG Animation */}
-            
+
 
             <div ref={contentRef} className="flex flex-col items-center justify-center w-full min-h-[50vh] p-0.5 relative z-10 bg-transparent ">
                 {/* Top details SVG */}

@@ -1,7 +1,6 @@
-import React, { type FormEvent, useState } from 'react'
-import { FaLinkedinIn, FaFacebookF, FaInstagram, FaTwitter, FaArrowRight } from "react-icons/fa"
+import React from 'react'
+import { FaLinkedinIn, FaFacebookF, FaInstagram } from "react-icons/fa"
 import AnimatedText from "../../text/AnimatedText"
-
 
 const FooterRight: React.FC = () => {
   return (
@@ -53,13 +52,6 @@ const FooterLeft: React.FC = () => {
 }
 
 const Footer: React.FC = () => {
-  const [email, setEmail] = useState("")
-
-  const handleSubscribe = (e: FormEvent) => {
-    e.preventDefault()
-    // Mock subscription handling
-    setEmail("")
-  }
 
   return (
     <footer className=" w-full bg-black text-gray-300">
@@ -68,7 +60,7 @@ const Footer: React.FC = () => {
         <FooterLeft />
 
         <FooterRight />
-        
+
         {/* Footer Bottom */}
         {/* <div className="flex flex-col md:flex-row justify-between items-center mt-40 gap-8">
           <div className="text-sm text-gray-500">
