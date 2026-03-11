@@ -9,7 +9,6 @@ const CourseCard: React.FC<CourseData> = ({
   title,
   description,
   link,
-  price,
   duration,
   level,
   rating,
@@ -49,11 +48,8 @@ const CourseCard: React.FC<CourseData> = ({
         <h3 className="text-xl sm:text-2xl uppercase font-bold mb-4 text-headline leading-tight line-clamp-2 transition-colors">{title}</h3>
         <p className="text-subtext font-nobile text-sm sm:text-base mb-6 flex-1 line-clamp-3 leading-relaxed">{description}</p>
 
-        {/* Bottom Row: Price & Button */}
-        <div className="mt-auto pt-4 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div className="font-bold text-xl text-headline">
-            {price ? `₹${price.toLocaleString('en-IN')}` : 'Free'}
-          </div>
+        {/* Bottom Row: Button */}
+        <div className="mt-auto pt-4 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-end gap-4">
           <Link
             className="flex items-center justify-center border border-headline text-headline hover:bg-headline hover:text-white px-6 py-2 uppercase text-xs tracking-widest font-semibold transition-all duration-300"
             to={link}

@@ -96,12 +96,6 @@ const CourseDetail: React.FC = () => {
                                     <span>({course.reviews} reviews)</span>
                                 </div>
                             )}
-                            {course.instructor && (
-                                <div className="flex items-center gap-2 bg-white/50 backdrop-blur-sm px-4 py-2 rounded-full border border-border/50 shadow-sm">
-                                    <BsPerson className="text-[#ef7b01]" />
-                                    <span>By <span className="text-headline font-semibold">{course.instructor}</span></span>
-                                </div>
-                            )}
                         </div>
                     </div>
                 </div>
@@ -131,12 +125,7 @@ const CourseDetail: React.FC = () => {
                         <div className="block lg:hidden rounded-3xl overflow-hidden mb-10 border-2 border-border bg-background">
                             <img src={course.imageSrc} alt={course.imageAlt} className="w-full h-auto object-cover max-h-[300px]" />
                             <div className="p-6">
-                                <div className="flex items-baseline gap-3 mb-4">
-                                    <span className="text-3xl font-extrabold text-headline">{course.price ? `₹${course.price.toLocaleString('en-IN')}` : 'Free'}</span>
-                                    {course.originalPrice && (
-                                        <span className="text-lg text-subtext line-through">₹{course.originalPrice.toLocaleString('en-IN')}</span>
-                                    )}
-                                </div>
+
                                 <button className="w-full bg-headline text-text-inverse py-4 rounded-xl font-bold uppercase text-lg transition-all hover:bg-headline/90 mb-3">
                                     Enroll Now
                                 </button>
@@ -174,12 +163,7 @@ const CourseDetail: React.FC = () => {
                             </div>
 
                             <div className="p-8">
-                                <div className="flex items-center gap-3 mb-6">
-                                    <span className="text-4xl font-extrabold text-headline">{course.price ? `₹${course.price.toLocaleString('en-IN')}` : 'Free'}</span>
-                                    {course.originalPrice && (
-                                        <span className="text-xl text-subtext line-through">₹{course.originalPrice.toLocaleString('en-IN')}</span>
-                                    )}
-                                </div>
+
 
                                 <button className="w-full bg-headline hover:bg-headline/90 hover:scale-[1.02] active:scale-[0.98] text-text-inverse py-4 rounded-xl font-extrabold uppercase text-lg transition-all mb-3 flex justify-center items-center">
                                     Enroll Now
@@ -205,8 +189,8 @@ const CourseDetail: React.FC = () => {
                                         <strong className="text-headline">Yes</strong>
                                     </div>
                                     <div className="flex items-center justify-between text-subtext text-sm">
-                                        <div className="flex items-center gap-3"><AiFillStar className="text-headline" /> Access</div>
-                                        <strong className="text-headline">Lifetime</strong>
+                                        <div className="flex items-center gap-3"><BsPerson className="text-headline" /> Mentorship</div>
+                                        <strong className="text-headline">1-on-1</strong>
                                     </div>
                                 </div>
                             </div>

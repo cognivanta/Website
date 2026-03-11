@@ -19,11 +19,9 @@ export interface CourseData {
     syllabus?: SyllabusModule[]; // Accordion data
 
     // New premium fields
-    price?: number;
-    originalPrice?: number;
     duration?: string;
     level?: 'Beginner' | 'Intermediate' | 'Advanced' | 'All Levels';
-    instructor?: string;
+
     rating?: number;
     reviews?: number;
     features?: string[];
@@ -37,11 +35,8 @@ export const coursesData: CourseData[] = [
         title: "Java Spring Boot Backend",
         description: "Master Java, Spring Core, Spring Boot, Hibernate, and Microservices architecture.",
         link: "/training/java-spring-boot",
-        price: 6999,
-        originalPrice: 13999,
         duration: "16 Weeks",
         level: "Intermediate",
-        instructor: "Michael Chang",
         rating: 4.8,
         reviews: 215,
         features: [
@@ -77,11 +72,8 @@ export const coursesData: CourseData[] = [
         title: "Frontend Development",
         description: "HTML, CSS, JavaScript, React. Build responsive websites.",
         link: "/training/frontend-development",
-        price: 4999,
-        originalPrice: 9999,
         duration: "12 Weeks",
         level: "Beginner",
-        instructor: "Sarah Jenkins",
         rating: 4.8,
         reviews: 245,
         features: [
@@ -113,11 +105,8 @@ export const coursesData: CourseData[] = [
         title: "Backend Development",
         description: "Node.js, Express, Databases. Build robust APIs.",
         link: "/training/backend-development",
-        price: 5999,
-        originalPrice: 11999,
         duration: "14 Weeks",
         level: "Intermediate",
-        instructor: "David Chen",
         rating: 4.9,
         reviews: 182,
         features: [
@@ -149,11 +138,8 @@ export const coursesData: CourseData[] = [
         title: "Fullstack Development",
         description: "MERN Stack. Build end-to-end web applications.",
         link: "/training/fullstack-development",
-        price: 8999,
-        originalPrice: 15999,
         duration: "24 Weeks",
         level: "Beginner",
-        instructor: "Alex Rivera",
         rating: 4.7,
         reviews: 310,
         features: [
@@ -185,11 +171,8 @@ export const coursesData: CourseData[] = [
         title: "UI/UX Design",
         description: "Figma, Prototyping, Wireframing. Design beautiful interfaces.",
         link: "/training/ui-ux-design",
-        price: 3999,
-        originalPrice: 7999,
         duration: "8 Weeks",
         level: "All Levels",
-        instructor: "Emily Stone",
         rating: 4.9,
         reviews: 405,
         features: [
