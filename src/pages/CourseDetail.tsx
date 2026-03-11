@@ -28,15 +28,15 @@ const CourseDetail: React.FC = () => {
     const maxScroll = 600; // Complete transition after 300px of scrolling
     const progress = Math.min(scrollY / maxScroll, 1);
 
-    // White: rgb(255, 255, 255) to bg-background: rgb(219, 209, 195)
-    const r = Math.round(255 - (255 - 219) * progress);
-    const g = Math.round(255 - (255 - 209) * progress);
+    // White: rgb(116, 103, 255) to bg-background: rgb(219, 209, 195)
+    const r = Math.round(116 - (116 - 219) * progress);
+    const g = Math.round(103 - (103 - 209) * progress);
     const b = Math.round(255 - (255 - 195) * progress);
     const svgFillColor = `rgb(${r}, ${g}, ${b})`;
 
-    // White: rgb(255, 255, 255) to border-border: rgb(203, 191, 175)
-    const strokeR = Math.round(255 - (255 - 203) * progress);
-    const strokeG = Math.round(255 - (255 - 191) * progress);
+    // White: rgb(116, 103, 255) to border-border: rgb(203, 191, 175)
+    const strokeR = Math.round(116 - (116 - 203) * progress);
+    const strokeG = Math.round(103 - (103 - 191) * progress);
     const strokeB = Math.round(255 - (255 - 175) * progress);
     const svgStrokeColor = `rgb(${strokeR}, ${strokeG}, ${strokeB})`;
 
