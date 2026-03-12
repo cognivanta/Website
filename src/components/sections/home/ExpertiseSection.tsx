@@ -92,7 +92,7 @@ const ServicesScroll: React.FC = () => {
             ))}
           </div>
           {/* Get In Touch Button */}
-          <div onClick={() => navigate('/contact')} className='cursor-pointer sm:self-end flex items-center justify-center md:w-full sm:w-fit bg-headline text-text-inverse py-3 px-6 md:px-0'>
+          <div onClick={() => navigate('/contact?subject=Business Enquiry')} className='cursor-pointer sm:self-end flex items-center justify-center md:w-full sm:w-fit bg-headline text-text-inverse py-3 px-6 md:px-0'>
             <button className='cursor-pointer w-fit uppercase text-center font-bold'>get in touch</button>
           </div>
         </div>

@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import NavBar from '../components/navigation/NavBar';
 import Footer from '../components/sections/home/Footer';
 
 const SUBJECTS = [
-    'General Query',
+    "Business Enquiry",
+    'General Enquiry',
     'Enquire About a Course',
     'Register for a Course',
 ];
@@ -41,6 +43,7 @@ const ClockIcon = () => (
 /* ── main component ─────────────────────────────────────────────────────── */
 
 const Enquire: React.FC = () => {
+    const [searchParams] = useSearchParams();
     const [form, setForm] = useState({
         name: '',
         email: '',
@@ -51,6 +54,18 @@ const Enquire: React.FC = () => {
     });
     const [submitted, setSubmitted] = useState(false);
     const [errors, setErrors] = useState<Record<string, string>>({});
+
+    // Pre-populate subject from ?subject= query param (accepts custom values too)
+    useEffect(() => {
+        const subjectParam = searchParams.get('subject');
+        if (subjectParam) {
+            setForm(prev => ({ ...prev, subject: subjectParam }));
+        }
+    }, [searchParams]);
+
+    // Build the option list: include any custom subject not already in SUBJECTS
+    const customSubject =
+        form.subject && !SUBJECTS.includes(form.subject) ? form.subject : null;
 
     const validate = () => {
         const e: Record<string, string> = {};
@@ -219,6 +234,9 @@ const Enquire: React.FC = () => {
                                                         className={inputCls(!!errors.subject) + ' appearance-none pr-10 cursor-pointer'}
                                                     >
                                                         <option value="" disabled>Select a subject</option>
+                                                        {customSubject && (
+                                                            <option key={customSubject} value={customSubject}>{customSubject}</option>
+                                                        )}
                                                         {SUBJECTS.map(s => (
                                                             <option key={s} value={s}>{s}</option>
                                                         ))}

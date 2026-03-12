@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import CourseCard from '../components/sections/training/CourseCard';
 import { coursesData } from '../components/sections/training/data/CourseData';
 import NavBar from '../components/navigation/NavBar';
@@ -6,6 +7,7 @@ import Footer from '../components/sections/home/Footer';
 import TrainingFeatures from '../components/sections/training/TrainingFeatures';
 
 const Training: React.FC = () => {
+    const navigate = useNavigate();
     const [scrollY, setScrollY] = useState(0);
 
     // Track scroll position for hero SVG color transition
@@ -60,7 +62,7 @@ const Training: React.FC = () => {
                         >
                             Explore Our Courses
                         </button>
-                        <button className="cursor-pointer w-full sm:w-auto px-8 py-3.5 bg-transparent hover:bg-headline text-headline hover:text-white border border-headline rounded-xl font-bold text-lg transition-all hover:-translate-y-1">
+                        <button onClick={() => navigate(`/contact?subject=Enquire About Training`)} className="cursor-pointer w-full sm:w-auto px-8 py-3.5 bg-transparent hover:bg-headline text-headline hover:text-white border border-headline rounded-xl font-bold text-lg transition-all hover:-translate-y-1">
                             Enquire Now
                         </button>
                     </div>

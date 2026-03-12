@@ -11,7 +11,7 @@ const FooterRight: React.FC = () => {
       <div className="w-fit">
         <AnimatedText
           text="GET IN TOUCH"
-          onClick={() => navigate('/contact')}
+          onClick={() => navigate('/contact?subject=Business Enquiry')}
           className="cursor-pointer sm:text-3xl md:text-6xl font-light tracking-wide text-gray-200"
         />
 
