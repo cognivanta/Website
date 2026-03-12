@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import Training from './pages/Training'
 import CourseDetail from './pages/CourseDetail'
+import Enquire from './pages/Enquire'
 
 const App: React.FC = () => {
 
@@ -14,6 +15,7 @@ const App: React.FC = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/training" element={<Training />} />
           <Route path="/training/:courseId" element={<CourseDetail />} />
+          <Route path="/enquire" element={<Enquire />} />
         </Routes>
       </div>
     </ReactLenis>
