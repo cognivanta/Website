@@ -32,8 +32,8 @@ export const coursesData: CourseData[] = [
         id: "java-spring-boot",
         imageSrc: javaSpringBootImg,
         imageAlt: "Java Spring Boot Development",
-        title: "Java Spring Boot Backend",
-        description: "Master Java, Spring Core, Spring Boot, Hibernate, and Microservices architecture.",
+        title: "Java Training Program",
+        description: "Master enterprise-level development and build robust backend systems with our comprehensive Java track.",
         link: "/training/java-spring-boot",
         duration: "16 Weeks",
         level: "Intermediate",
@@ -48,20 +48,36 @@ export const coursesData: CourseData[] = [
         ],
         syllabus: [
             {
-                title: "Module 1: Java Core & OOPS",
-                topics: ["Java 8+ Features", "Collections Framework", "Multithreading & Concurrency", "Exception Handling"]
+                title: "Module 1: Java",
+                topics: ["Java Syntax & Structure","Variables, Data Types & Operators","Control Statements","Methods and Parameter Passing","Exception Handling","Multithreading"]
             },
             {
-                title: "Module 2: Spring Core & Data JPA",
-                topics: ["Dependency Injection (IoC)", "Spring Beans & Scopes", "Hibernate ORM", "Spring Data JPA Repository"]
+                title: "Module 2: Object-Oriented Programming (OOP) Concepts",
+                topics: ["Classes and Objects","Encapsulation","Inheritance","Polymorphism","Abstraction","Constructors and Access Modifiers"]
             },
             {
-                title: "Module 3: Spring Boot & REST APIs",
-                topics: ["Spring Boot Auto Configuration", "Building RESTful APIs", "Exception Handling (@ControllerAdvice)", "Validation"]
+                title: "Module 3: Collections Framework",
+                topics: ["List Interface", "Set Interface","Map Interface","Iterators and Enhanced For Loop","Collection Utility Methods"]
             },
             {
-                title: "Module 4: Security & Microservices",
-                topics: ["Spring Security & JWT", "OAuth2 Integration", "Microservices Concepts", "Eureka Service Discovery"]
+                title: "Module 4: JDBC (Java Database Connectivity)",
+                topics: ["JDBC Architecture and Drivers","Establishing Database Connection","Statement, PreparedStatement & CallableStatement","Executing Queries (CRUD Operations)","Transaction Management"]
+            },
+            {
+                title: "Module 5: Spring Boot",
+                topics: ["Spring Boot Architecture & Auto Configuration","Creating REST Applications with Spring Boot","Dependency Injection & Spring Beans","Spring Boot Annotations","Spring Boot with Database","Application Properties & Configuration"]
+            },
+            {
+                title: "Module 6: REST APIs",
+                topics: ["REST Architecture Principles","HTTP Methods (GET, POST, PUT, DELETE)","Request & Response Handling (JSON)","Status Codes & Error Handling","API Testing using Postman","Path Variables & Request Parameters"]
+            },
+            {
+                title: "Module 7: Live Project Integration",
+                topics: ["Frontend–Backend Integration","Database Integration","CRUD Operations Implementation","API Testing and Debugging","Error Handling and Validation","Deployment"]
+            },
+            {
+                title: "Module : Real-World Projects",
+                topics: ["Employee Management System","Banking Application"]
             }
         ]
     },
@@ -69,8 +85,8 @@ export const coursesData: CourseData[] = [
         id: "frontend-development",
         imageSrc: frontendImg,
         imageAlt: "Frontend Development",
-        title: "Frontend Development",
-        description: "HTML, CSS, JavaScript, React. Build responsive websites.",
+        title: "Python Training Program",
+        description: "Learn the fundamentals of one of the world's most versatile languages to build scalable web applications.",
         link: "/training/frontend-development",
         duration: "12 Weeks",
         level: "Beginner",
@@ -85,16 +101,32 @@ export const coursesData: CourseData[] = [
         ],
         syllabus: [
             {
-                title: "Module 1: HTML & CSS Basics",
-                topics: ["Introduction to HTML", "Semantic Tags", "CSS Selectors", "Flexbox & Grid"]
+                title: "Module 1: Python Basics",
+                topics: ["Python Syntax and Indentation","Variables and Data Types","Operators and Expressions","Conditional Statements","Loops","Functions and Arguments"]
             },
             {
-                title: "Module 2: Advanced JavaScript",
-                topics: ["ES6+ Features", "Promises & Async/Await", "DOM Manipulation API"]
+                title: "Module 2: Object-Oriented Programming (OOP)",
+                topics: ["Classes and Objects","Encapsulation","Inheritance","Polymorphism","Abstraction","Constructors (__init__ method)"]
             },
             {
-                title: "Module 3: React Fundamentals",
-                topics: ["Components & Props", "State & Lifecycle", "Hooks (useState, useEffect)", "React Router"]
+                title: "Module 3: File Handling",
+                topics: ["Opening and Closing Files","Reading Files","Writing and Appending Data","File Modes","Working with CSV / Text Files","Exception Handling in File Operations"]
+            },
+            {
+                title: "Module 4: Django Framework",
+                topics: ["Django Project and App Structure","Models and Database Migration","URL Routing and Views","Templates and Template Language","Django Admin Panel","Forms and Validation"]
+            },
+            {
+                title: "Module 5: API Development",
+                topics: ["REST API Concepts","Creating APIs using Django REST Framework","Serializers and Data Validation","Handling HTTP Methods","API Authentication and Permissions","Testing APIs using Postman"]
+            },
+            {
+                title: "Module 6: Real-Time Web Project",
+                topics: ["Project Requirement Analysis","Database Design and Models","Backend API Integration","Frontend–Backend Communication","Deployment and Testing"]
+            },
+            {
+                title: "Module 7: Real-World Projects",
+                topics: ["E-commerce Website","Student Portal"]
             }
         ]
     },
@@ -102,8 +134,8 @@ export const coursesData: CourseData[] = [
         id: "backend-development",
         imageSrc: backendImg,
         imageAlt: "Backend Development",
-        title: "Backend Development",
-        description: "Node.js, Express, Databases. Build robust APIs.",
+        title: "AI & Machine Learning Program",
+        description: "Dive into the future of technology by learning how to design and build intelligent, data-driven systems.",
         link: "/training/backend-development",
         duration: "14 Weeks",
         level: "Intermediate",
@@ -118,82 +150,32 @@ export const coursesData: CourseData[] = [
         ],
         syllabus: [
             {
-                title: "Module 1: Node.js & Express Basics",
-                topics: ["Introduction to Node.js", "Express Routing", "Middlewares", "RESTful API Design"]
+                title: "Module 1: Python for AI",
+                topics: ["Python Libraries for AI (NumPy, Pandas, Matplotlib)","Data Preprocessing and Data Cleaning","Working with Arrays and DataFrames","Data Visualization Techniques","Feature Engineering Basics","Using Python for Model Training"]
             },
             {
-                title: "Module 2: Databases & MongoDB",
-                topics: ["NoSQL Concepts", "Mongoose ORM", "CRUD Operations", "Aggregation Framework"]
+                title: "Module 2: Machine Learning Fundamentals",
+                topics: ["Types of Machine Learning (Supervised, Unsupervised, Reinforcement)","Regression Algorithms","Classification Algorithms","Model Training and Evaluation","Overfitting and Underfitting","Model Performance Metrics"]
             },
             {
-                title: "Module 3: Authentication & Authorization",
-                topics: ["JWT Tokens", "Role-based Access", "OAuth Integration", "Security Best Practices"]
-            }
-        ]
-    },
-    {
-        id: "fullstack-development",
-        imageSrc: fullstackImg,
-        imageAlt: "Fullstack Development",
-        title: "Fullstack Development",
-        description: "MERN Stack. Build end-to-end web applications.",
-        link: "/training/fullstack-development",
-        duration: "24 Weeks",
-        level: "Beginner",
-        rating: 4.7,
-        reviews: 310,
-        features: [
-            "Industry Projects",
-            "Mock Interviews",
-            "Placement Assistance",
-            "Full Stack Deployment",
-            "Lifetime Access"
-        ],
-        syllabus: [
-            {
-                title: "Module 1: Frontend Foundation",
-                topics: ["React Deep Dive", "State Management (Redux/Zustand)", "Performance Optimization"]
+                title: "Module 3: Deep Learning",
+                topics: ["Introduction to Neural Networks","Activation Functions","Convolutional Neural Networks","Recurrent Neural Networks","Training Deep Learning Models with TensorFlow / PyTorch","Model Optimization Techniques"]
             },
             {
-                title: "Module 2: Backend Integration",
-                topics: ["Connecting React to Express", "Handling CORS", "Data Fetching Strategies"]
+                title: "Module 4: Natural Language Processing (NLP)",
+                topics: ["Text Preprocessing (Tokenization, Stopwords Removal, Stemming, Lemmatization)","Text Vectorization","Sentiment Analysis","Named Entity Recognition","Language Models and Word Embeddings","Text Classification"]
             },
             {
-                title: "Module 3: Advanced Topics",
-                topics: ["WebSockets", "Docker Basics", "CI/CD Pipelines", "System Design Intro"]
-            }
-        ]
-    },
-    {
-        id: "ui-ux-design",
-        imageSrc: uiUxImg,
-        imageAlt: "UI/UX Design",
-        title: "UI/UX Design",
-        description: "Figma, Prototyping, Wireframing. Design beautiful interfaces.",
-        link: "/training/ui-ux-design",
-        duration: "8 Weeks",
-        level: "All Levels",
-        rating: 4.9,
-        reviews: 405,
-        features: [
-            "Industry Projects",
-            "Mock Interviews",
-            "Placement Assistance",
-            "Portfolio Review",
-            "Lifetime Access"
-        ],
-        syllabus: [
-            {
-                title: "Module 1: Design Principles",
-                topics: ["Color Theory", "Typography", "Spacing & Alignment", "Visual Hierarchy"]
+                title: "Module 5: Chatbot Development",
+                topics: ["Rule-Based Chatbot Design","NLP-Based Chatbot Architecture","Intent Recognition and Entity Extraction","Integrating Chatbots with APIs","Chatbot Training and Testing","Deployment on Web Platforms"]
             },
             {
-                title: "Module 2: Figma Mastery",
-                topics: ["Components & Variants", "Auto Layout", "Design Systems", "Prototyping"]
+                title: "Module 6: AI Real-Time Projects",
+                topics: ["Chatbot for Customer Support","Sentiment Analysis System","Image Classification Application","Recommendation System","AI-Based Text Summarization Tool","Deployment of AI Models in Web Applications"]
             },
             {
-                title: "Module 3: UX Research & Strategy",
-                topics: ["User Personas", "Wireframing", "Usability Testing", "Hand-off to Developers"]
+                title: "Module 7: Real-World Projects",
+                topics: ["AI Resume Screener","Intelligent AI Chatbot","Smart Recommendation System"]
             }
         ]
     }
