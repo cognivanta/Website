@@ -15,7 +15,7 @@ const App: React.FC = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/training" element={<Training />} />
           <Route path="/training/:courseId" element={<CourseDetail />} />
-          <Route path="/enquire" element={<Enquire />} />
+          <Route path="/contact" element={<Enquire />} />
         </Routes>
       </div>
     </ReactLenis>

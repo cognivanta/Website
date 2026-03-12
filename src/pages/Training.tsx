@@ -20,7 +20,7 @@ const Training: React.FC = () => {
     }, []);
 
     // Color interpolation constants
-    const maxScroll = 600; // Complete transition after 300px of scrolling
+    const maxScroll = 800; // Complete transition after 300px of scrolling
     const progress = Math.min(scrollY / maxScroll, 1);
 
     // White: rgb(116, 103, 255) to bg-background: rgb(219, 209, 195)
@@ -56,11 +56,11 @@ const Training: React.FC = () => {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                         <button
                             onClick={() => document.getElementById('courses-section')?.scrollIntoView({ behavior: 'smooth' })}
-                            className="w-full sm:w-auto px-8 py-3.5 bg-[#ef7b01] hover:bg-orange-500 text-white rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-orange-500/20 hover:-translate-y-1"
+                            className="cursor-pointer w-full sm:w-auto px-8 py-3.5 bg-[#ef7b01] hover:bg-orange-500 text-white rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-orange-500/20 hover:-translate-y-1"
                         >
                             Explore Our Courses
                         </button>
-                        <button className="w-full sm:w-auto px-8 py-3.5 bg-transparent hover:bg-headline text-headline hover:text-white border border-headline rounded-xl font-bold text-lg transition-all hover:-translate-y-1">
+                        <button className="cursor-pointer w-full sm:w-auto px-8 py-3.5 bg-transparent hover:bg-headline text-headline hover:text-white border border-headline rounded-xl font-bold text-lg transition-all hover:-translate-y-1">
                             Enquire Now
                         </button>
                     </div>

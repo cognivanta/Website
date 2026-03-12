@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import video1 from "../../../assets/expertiseSection-video-1.mp4"
 import video2 from "../../../assets/expertiseSection-video-2.mp4"
 import { sections } from './ExpertiseSectionContent';
@@ -41,6 +42,7 @@ const Hero: React.FC = () => {
 
 
 const ServicesScroll: React.FC = () => {
+  const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(1);
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -90,8 +92,8 @@ const ServicesScroll: React.FC = () => {
             ))}
           </div>
           {/* Get In Touch Button */}
-          <div className='sm:self-end flex items-center justify-center md:w-full sm:w-fit bg-headline text-text-inverse py-3 px-6 md:px-0'>
-            <button className='w-fit uppercase text-center font-bold'>get in touch</button>
+          <div onClick={() => navigate('/contact')} className='cursor-pointer sm:self-end flex items-center justify-center md:w-full sm:w-fit bg-headline text-text-inverse py-3 px-6 md:px-0'>
+            <button className='cursor-pointer w-fit uppercase text-center font-bold'>get in touch</button>
           </div>
         </div>
       </div>

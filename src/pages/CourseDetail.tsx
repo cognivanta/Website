@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { coursesData } from '../components/sections/training/data/CourseData';
 import SyllabusAccordion from '../components/sections/training/SyllabusAccordion';
 import NavBar from '../components/navigation/NavBar';
@@ -10,6 +10,7 @@ import { BsClock, BsBarChart, BsPerson } from 'react-icons/bs';
 
 const CourseDetail: React.FC = () => {
     const { courseId } = useParams<{ courseId: string }>();
+    const navigate = useNavigate();
     const course = coursesData.find((c) => c.id === courseId);
     const [scrollY, setScrollY] = useState(0);
 
@@ -25,7 +26,7 @@ const CourseDetail: React.FC = () => {
     }, []);
 
     // Color interpolation constants
-    const maxScroll = 600; // Complete transition after 300px of scrolling
+    const maxScroll = 800; // Complete transition after 300px of scrolling
     const progress = Math.min(scrollY / maxScroll, 1);
 
     // White: rgb(116, 103, 255) to bg-background: rgb(219, 209, 195)
@@ -115,7 +116,6 @@ const CourseDetail: React.FC = () => {
             <div className="-mt-0.5 grow w-full relative z-20 transition-colors duration-75" style={{ backgroundColor: svgFillColor }}>
                 <div className="flex flex-col w-full text-headline text-center gap-4 py-12">
                     <p className="w-full text-center text-5xl font-bold">Industry-Aligned Syllabus</p>
-                    <p className="w-full text-center text-5xl font-bold">Week by Week</p>
                     <p className="w-full text-center text-2xl font-nobile font-bold text-subtext mt-2">Every module maps directly to real job requirements</p>
                 </div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col lg:flex-row gap-12 w-full">
@@ -126,10 +126,10 @@ const CourseDetail: React.FC = () => {
                             <img src={course.imageSrc} alt={course.imageAlt} className="w-full h-auto object-cover max-h-[300px]" />
                             <div className="p-6">
 
-                                <button className="w-full bg-headline text-text-inverse py-4 rounded-xl font-bold uppercase text-lg transition-all hover:bg-headline/90 mb-3">
+                                <button onClick={() => navigate("/contact")} className="cursor-pointer w-full bg-headline text-text-inverse py-4 rounded-xl font-bold uppercase text-lg transition-all hover:bg-headline/90 mb-3">
                                     Enroll Now
                                 </button>
-                                <button className="w-full bg-transparent hover:bg-border/20 text-headline border-2 border-border py-3 rounded-xl font-bold uppercase transition-all mb-4">
+                                <button onClick={() => navigate("/contact")} className="cursor-pointer w-full bg-transparent hover:bg-border/20 text-headline border-2 border-border py-3 rounded-xl font-bold uppercase transition-all mb-4">
                                     Enquire Now
                                 </button>
                             </div>
@@ -165,10 +165,10 @@ const CourseDetail: React.FC = () => {
                             <div className="p-8">
 
 
-                                <button className="w-full bg-headline hover:bg-headline/90 hover:scale-[1.02] active:scale-[0.98] text-text-inverse py-4 rounded-xl font-extrabold uppercase text-lg transition-all mb-3 flex justify-center items-center">
+                                <button onClick={() => navigate("/contact")} className="cursor-pointer w-full bg-headline hover:bg-headline/90 hover:scale-[1.02] active:scale-[0.98] text-text-inverse py-4 rounded-xl font-extrabold uppercase text-lg transition-all mb-3 flex justify-center items-center">
                                     Enroll Now
                                 </button>
-                                <button className="w-full bg-transparent hover:bg-border/20 active:scale-[0.98] text-headline border-2 border-border py-3 rounded-xl font-bold uppercase transition-all mb-6 flex justify-center items-center">
+                                <button onClick={() => navigate("/contact")} className="cursor-pointer w-full bg-transparent hover:bg-border/20 active:scale-[0.98] text-headline border-2 border-border py-3 rounded-xl font-bold uppercase transition-all mb-6 flex justify-center items-center">
                                     Enquire Now
                                 </button>
 

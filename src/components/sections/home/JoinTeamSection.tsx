@@ -84,9 +84,7 @@ const JoinTeamSection: React.FC = () => {
                         <h2>you to be part of it</h2>
                     </div>
                     <a
-                        href="https://localhost/"
-                        target="_blank"
-                        rel="noreferrer"
+                        href="/careers"
                         className="inline-block w-full mt-4 group transition-all duration-300 pointer-events-auto"
                     >
                         <h2 className="w-full pb-[10%] text-center text-5xl md:text-7xl lg:text-8xl uppercase font-bold text-headline transition-all duration-300">

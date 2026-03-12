@@ -95,8 +95,8 @@ const Enquire: React.FC = () => {
 
                                 {/* heading */}
                                 <div>
-                                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-headline leading-tight mb-4">
-                                        Contact
+                                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-headline leading-tight mb-4">
+                                        Let's Connect
                                     </h1>
                                 </div>
 

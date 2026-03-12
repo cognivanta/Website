@@ -1,15 +1,18 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { FaLinkedinIn, FaFacebookF, FaInstagram } from "react-icons/fa"
 import AnimatedText from "../../text/AnimatedText"
 
 const FooterRight: React.FC = () => {
+  const navigate = useNavigate()
   return (
     < div className="flex-1 flex flex-col wrap-normal" >
 
       <div className="w-fit">
         <AnimatedText
           text="GET IN TOUCH"
-          className="sm:text-3xl md:text-6xl font-light tracking-wide text-gray-200"
+          onClick={() => navigate('/contact')}
+          className="cursor-pointer sm:text-3xl md:text-6xl font-light tracking-wide text-gray-200"
         />
 
         <div className="w-full font-nobile flex flex-row pt-2">
@@ -19,9 +22,9 @@ const FooterRight: React.FC = () => {
             <h1>Punjab 140301</h1>
           </div>
           <div className="flex-1 flex flex-col items-center sm:gap-2 md:gap-5 text-sm text-gray-400">
-            <h1>Services</h1>
-            <h1>About us</h1>
-            <h1>Careers</h1>
+            <h1 onClick={() => navigate('/#services')} className='cursor-pointer'>Services</h1>
+            <h1 onClick={() => navigate('/#about')} className='cursor-pointer'>About us</h1>
+            <h1 onClick={() => navigate('/careers')} className='cursor-pointer'>Careers</h1>
           </div>
           <div className="start-end flex-1 flex justify-end sm:gap-8 md:gap-5 text-xl text-gray-400">
             <FaLinkedinIn className="hover:text-white transition cursor-pointer" />

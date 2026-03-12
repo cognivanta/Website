@@ -26,7 +26,7 @@ const AccordionItem: React.FC<{ module: SyllabusModule; isOpen: boolean; onClick
         <div className={`border-2 border-border rounded-3xl mb-4 overflow-hidden bg-background transition-all duration-300 ${isOpen ? 'shadow-md border-headline ring-1 ring-headline/10' : 'shadow-none hover:border-headline/50'}`}>
             <button
                 type="button"
-                className={`w-full text-left px-6 py-5 flex justify-between items-center bg-background hover:bg-border/10 transition-colors ${isOpen ? 'bg-border/20' : ''}`}
+                className={`cursor-pointer w-full text-left px-6 py-5 flex justify-between items-center bg-background hover:bg-border/10 transition-colors ${isOpen ? 'bg-border/20' : ''}`}
                 onClick={onClick}
             >
                 <div className="flex items-center gap-4">
@@ -56,7 +56,7 @@ const AccordionItem: React.FC<{ module: SyllabusModule; isOpen: boolean; onClick
                         {module.topics.map((topic, topicIndex) => (
                             <li key={topicIndex} className="flex items-start gap-3 group">
                                 <BsBook className="text-lighttext mt-1 shrink-0 group-hover:text-headline transition-colors" />
-                                <span className="text-subtext font-medium group-hover:text-headline transition-colors">
+                                <span className="arrow-cursor text-subtext font-medium group-hover:text-headline transition-colors">
                                     {topic}
                                 </span>
                             </li>
