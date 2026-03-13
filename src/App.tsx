@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage'
 import Training from './pages/Training'
 import CourseDetail from './pages/CourseDetail'
 import Enquire from './pages/Enquire'
+import Careers from './pages/Careers'
 
 const App: React.FC = () => {
 
@@ -16,6 +17,7 @@ const App: React.FC = () => {
           <Route path="/training" element={<Training />} />
           <Route path="/training/:courseId" element={<CourseDetail />} />
           <Route path="/contact" element={<Enquire />} />
+          <Route path="/careers" element={<Careers />} />
         </Routes>
       </div>
     </ReactLenis>

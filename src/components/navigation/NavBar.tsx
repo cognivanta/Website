@@ -15,6 +15,7 @@ const NavBar: React.FC = () => {
     { label: "Services", href: "/#services" },
     { label: "Contact", href: "/contact" },
     { label: "Training", href: "/training" },
+    { label: "Careers", href: "/careers" },
   ];
 
   const [visible, setVisible] = useState(true);
