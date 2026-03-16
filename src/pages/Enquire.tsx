@@ -54,6 +54,7 @@ const Enquire: React.FC = () => {
         message: '',
         agreed: false,
     });
+    const [attachment, setAttachment] = useState<File | null>(null);
     const [submitted, setSubmitted] = useState(false);
     const [errors, setErrors] = useState<Record<string, string>>({});
 
@@ -88,6 +89,11 @@ const Enquire: React.FC = () => {
         const value = target.type === 'checkbox' ? target.checked : target.value;
         setForm(prev => ({ ...prev, [target.name]: value }));
         if (errors[target.name]) setErrors(prev => ({ ...prev, [target.name]: '' }));
+    };
+
+    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target.files?.[0] ?? null;
+        setAttachment(file);
     };
 
     const handleSubmit = (e: React.FormEvent) => {
@@ -179,6 +185,7 @@ const Enquire: React.FC = () => {
                                                 onClick={() => {
                                                     setSubmitted(false);
                                                     setForm({ name: '', email: '', mobile: '', subject: '', message: '', agreed: false });
+                                                    setAttachment(null);
                                                 }}
                                                 className="mt-2 px-6 py-2.5 border-headline border-1 hover:bg-headline hover:text-white text-headline font-semibold cursor-pointer transition-all"
                                             >
@@ -268,6 +275,45 @@ const Enquire: React.FC = () => {
                                                     className={inputCls(false) + ' resize-none'}
                                                 />
                                             </Field>
+
+                                            {/* Attachment */}
+                                            <div className="flex flex-col gap-1.5">
+                                                <span className="text-sm font-light text-headline">Attachment <span className="text-subtext/50 text-xs">(optional)</span></span>
+                                                <div className="flex items-center gap-3">
+                                                    <label
+                                                        htmlFor="file-attachment"
+                                                        className="flex items-center gap-2 px-4 py-2.5 border-b border-border text-sm text-subtext cursor-pointer hover:border-headline hover:text-headline transition-all select-none"
+                                                    >
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                                            <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 0 1 17.99 9.1l-8.57 8.57a2 2 0 0 1-2.83-2.83l7.78-7.77" />
+                                                        </svg>
+                                                        {attachment ? 'Change file' : 'Attach file'}
+                                                    </label>
+                                                    <input
+                                                        id="file-attachment"
+                                                        type="file"
+                                                        className="sr-only"
+                                                        onChange={handleFileChange}
+                                                        accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.zip"
+                                                    />
+                                                    {attachment && (
+                                                        <div className="flex items-center gap-2 min-w-0">
+                                                            <span className="text-sm text-headline truncate max-w-[180px]">{attachment.name}</span>
+                                                            <button
+                                                                type="button"
+                                                                onClick={() => setAttachment(null)}
+                                                                className="shrink-0 text-subtext/50 hover:text-red-400 transition-colors cursor-pointer"
+                                                                aria-label="Remove attachment"
+                                                            >
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                                    <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                                <p className="text-xs text-subtext/40">Accepted: PDF, DOC, DOCX, JPG, PNG, ZIP</p>
+                                            </div>
 
                                             {/* Privacy checkbox */}
                                             <div className="flex flex-col gap-1">
