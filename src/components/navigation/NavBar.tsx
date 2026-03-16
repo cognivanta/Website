@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import logo from "../../assets/cognivanta.svg"
 import AnimatedText from '../text/AnimatedText';
 import { useLenis } from 'lenis/react';
+import { useNavigate } from 'react-router-dom';
 
 type NavLinkProps = {
   label: string;
@@ -41,15 +42,22 @@ const NavBar: React.FC = () => {
 
   const NavLink: React.FC<NavLinkProps> = ({ label, href }) => {
     const lenis = useLenis();
+    const navigate = useNavigate();
 
     const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-      // Check if it's an anchor link and we're on the homepage
-      if (href.startsWith('/#') && window.location.pathname === '/') {
-        const targetId = href.substring(2); // Remove '/#'
-        const element = document.getElementById(targetId);
-        if (element) {
-          e.preventDefault();
-          lenis?.scrollTo(element);
+      if (href.startsWith('/#')) {
+        e.preventDefault();
+        const sectionId = href.substring(2); // Remove '/#'
+
+        if (window.location.pathname === '/') {
+          // Already on homepage — smooth scroll with Lenis
+          const element = document.getElementById(sectionId);
+          if (element) {
+            lenis?.scrollTo(element);
+          }
+        } else {
+          // On a different page — navigate to home and pass scrollTo via state
+          navigate('/', { state: { scrollTo: sectionId } });
         }
       }
     };

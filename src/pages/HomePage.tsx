@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+import { useLenis } from 'lenis/react'
 import NavBar from '../components/navigation/NavBar'
 import Hero from '../components/sections/home/Hero'
 import AboutSection from '../components/sections/home/AboutSection'
@@ -8,6 +10,23 @@ import JoinTeamSection from '../components/sections/home/JoinTeamSection'
 import Footer from '../components/sections/home/Footer'
 
 const HomePage: React.FC = () => {
+  const location = useLocation();
+  const lenis = useLenis();
+
+  useEffect(() => {
+    const scrollTo = (location.state as { scrollTo?: string } | null)?.scrollTo;
+    if (!scrollTo) return;
+
+    // Small delay to allow sections to mount in the DOM
+    const timer = setTimeout(() => {
+      const element = document.getElementById(scrollTo);
+      if (element) {
+        lenis?.scrollTo(element, { immediate: false });
+      }
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, [location.state, lenis]);
 
   return (
     <div className="h-full w-full bg-background overflow-x-clip">
