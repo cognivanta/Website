@@ -12,7 +12,7 @@ const FooterRight: React.FC = () => {
         <AnimatedText
           text="GET IN TOUCH"
           onClick={() => navigate('/contact')}
-          className="cursor-pointer sm:text-3xl md:text-6xl font-light tracking-wide text-gray-200"
+          className="cursor-pointer text-4xl lg:text-6xl font-light tracking-wide text-gray-200"
         />
 
         <div className="w-full font-nobile flex flex-row pt-2">
