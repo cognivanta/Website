@@ -42,7 +42,7 @@ const CareersHero: React.FC = () => {
             {/* Main headline */}
             <div className="flex flex-col font-semibold uppercase text-right text-5xl md:text-8xl text-headline">
                 <div className="flex flex-row items-baseline justify-end gap-2 sm:gap-4">
-                    <p>Build the</p>
+                    <p>Shape the</p>
                 </div>
                 <div className="flex flex-row justify-end">
                     <p>Future</p>
@@ -78,11 +78,13 @@ const CareersHero: React.FC = () => {
                 {/* Description */}
                 <div className="font-nobile flex flex-col gap-4 w-full sm:w-[40%] md:w-[45%] text-lg sm:text-lg text-subtext sm:text-right md:text-justify leading-normal">
                     <p>
-                        At <b>Cognivanta</b>, we believe great products are built by <b>great people</b>. We're looking for thinkers, builders, and problem-solvers who want to leave a real mark.
+                        At <b>Cognivanta</b>, we are focused on building technology that makes a difference. We seek ambitious individuals who are ready to push boundaries, solve meaningful problems, and grow with purpose.
                     </p>
                     <p>
-                        Join a team that moves fast, thinks deeply, and <b>builds solutions that matter</b>. We don't just offer jobs — we offer a place to grow.
+                        Be part of a team where <b>innovation, ownership, and impact</b> define the way we work.
                     </p>
+                    <p><i>
+                        We don't just hire for what someone knows today; we invest in what they are capable of doing tomorrow.</i></p>
                     {/* Scroll cue */}
                     <div
                         onClick={() => {
@@ -109,26 +111,26 @@ const cultureValues = [
     {
         id: 1,
         emoji: '🚀',
-        title: 'Move Fast, Stay Thoughtful',
-        desc: 'We ship quickly without cutting corners. Speed and quality aren\'t opposites — they\'re our standard.',
+        title: 'Innovation & Excellence',
+        desc: 'We move with purpose and focus on delivering high-quality work. Speed matters, but excellence always comes first.',
     },
     {
         id: 2,
         emoji: '🤝',
-        title: 'Collaboration Over Hierarchy',
-        desc: 'The best ideas come from everywhere. We value open dialogue, mutual respect, and genuine teamwork.',
+        title: 'Integrity & Trust',
+        desc: 'We build honest relationships through transparency, reliability, and ethical practices. Every solution we deliver prioritizes security, trust, and long-term confidence.',
     },
     {
         id: 3,
         emoji: '🌱',
-        title: 'Grow Without Limits',
-        desc: 'We invest in our people. Mentorship, learning budgets, and stretch opportunities are built into our culture.',
+        title: 'Growth & Learning',
+        desc: 'We encourage curiosity, continuous learning, and the sharing of knowledge. Through mentorship and collaboration, we help people grow professionally and technically.',
     },
     {
         id: 4,
         emoji: '💡',
-        title: 'Innovation Is Everyone\'s Job',
-        desc: 'You don\'t need a title to bring a bold idea. We create space for curiosity and experimentation at every level.',
+        title: 'Impact & Client-Centricity',
+        desc: 'Our success is measured by the value and results we deliver to our clients. We build purposeful solutions that solve real problems and support shared success.',
     },
 ]
 
@@ -149,7 +151,7 @@ const WorkCultureSection: React.FC = () => (
                 {/* Section headline */}
                 <div className="mb-12 md:mb-20">
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold uppercase leading-tight max-w-3xl">
-                        A culture built for people who <span className="text-hovernavlink">care</span> deeply.
+                        Where passion meets purpose and <span className="text-hovernavlink">ideas come to life</span>.
                     </h2>
                 </div>
 
@@ -253,10 +255,10 @@ const OpenPositionsSection: React.FC = () => {
             {/* Section headline */}
             <div className="w-full flex flex-col justify-center items-center mb-4 gap-6">
                 <h2 className="w-full text-base text-center text-4xl sm:text-5xl md:text-6xl font-bold uppercase text-headline">
-                    Find your role.
+                    Find Your Opportunity
                 </h2>
                 <p className="w-full text-center font-nobile text-subtext text-base md:text-lg max-w-xl leading-relaxed">
-                    We're always on the lookout for exceptional people. Don't see a perfect fit? Reach out anyway.
+                    Great talent doesn’t always fit into predefined roles. If you believe you can make an impact, connect with us.
                 </p>
             </div>
 

@@ -48,12 +48,12 @@ const Training: React.FC = () => {
                         Talent Incubation:  <span className="text-transparent bg-clip-text bg-linear-to-r from-[#ef7b01] to-orange-400"> Building Tomorrow's Experts Today</span>
                     </h1>
                     <p className="mt-6 max-w-2xl text-lg md:text-xl text-subtext mx-auto mb-10 leading-relaxed font-nobile">
-                        Talent Incubation allows us to <b>build</b> our own experts from the ground up. This approach ensures that when someone joins our team full-time, they are already culturally aligned, technically prepared, and ready to hit the ground running.
+                        Our Talent Incubation program is designed to develop strong, industry-ready professionals through focused training and real-world learning. We equip individuals with the technical skills, practical knowledge, and confidence needed to succeed in a fast-evolving technology landscape.
                     </p>
                     <p className="mt-6 max-w-2xl text-lg md:text-xl text-subtext mx-auto mb-10 leading-relaxed font-nobile">
                         <b>Our Incubation Philosophy</b>
                         <br></br>
-                        <i>We don't just hire for what someone knows today; we invest in what they are capable of doing tomorrow.</i>
+                        <i>Learning is a journey where curiosity leads, practice shapes, and purpose gives it meaning.</i>
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                         <button
