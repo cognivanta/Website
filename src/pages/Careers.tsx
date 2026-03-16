@@ -30,7 +30,6 @@ const WaveTop: React.FC<{ className?: string }> = ({ className = '' }) => (
 
 // ─── HERO SECTION ─────────────────────────────────────────────────────────────
 const CareersHero: React.FC = () => {
-    const navigate = useNavigate()
     return (
         <section className="relative w-full min-h-screen bg-background flex flex-col md:justify-between py-6 sm:py-10 section-padding">
 
@@ -91,14 +90,9 @@ const CareersHero: React.FC = () => {
                             const el = document.getElementById('open-positions')
                             el?.scrollIntoView({ behavior: 'smooth' })
                         }}
-                        className="cursor-pointer inline-flex items-center gap-2 mt-4 self-start sm:self-end"
+                        className="cursor-pointer inline-flex items-center gap-2 mt-4 self-start sm:self-end bg-headline text-text-inverse py-3 px-6"
                     >
-                        <div
-                            onClick={() => navigate('/careers/#open-positions')}
-                            className="cursor-pointer flex items-center justify-center bg-headline text-text-inverse py-3 px-6"
-                        >
-                            <span className="uppercase font-bold text-sm tracking-widest">View Open Roles</span>
-                        </div>
+                        <span className="uppercase font-bold text-sm tracking-widest">View Open Roles</span>
                     </div>
                 </div>
             </div>
