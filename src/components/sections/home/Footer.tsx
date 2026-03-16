@@ -11,22 +11,26 @@ const FooterRight: React.FC = () => {
       <div className="w-fit">
         <AnimatedText
           text="GET IN TOUCH"
-          onClick={() => navigate('/contact?subject=Business Enquiry')}
+          onClick={() => navigate('/contact')}
           className="cursor-pointer sm:text-3xl md:text-6xl font-light tracking-wide text-gray-200"
         />
 
         <div className="w-full font-nobile flex flex-row pt-2">
-          <div className="flex-1 flex flex-col sm:gap-2 md:gap-5 text-sm text-gray-400">
-            <h1>Shivjot, Sector 120</h1>
-            <h1>Dist. Mohali</h1>
-            <h1>Punjab 140301</h1>
+          <div className="flex-1 flex flex-col sm:gap-2 md:gap-2 text-sm text-gray-400">
+            <h1>Shivjot Enclaves,</h1>
+            <h1>Guru Teg Bahadur Nagar</h1>
+            <h1>Kharar, Dist. Mohali</h1>
+            <h1>Punjab, 140307</h1>
           </div>
-          <div className="flex-1 flex flex-col items-center sm:gap-2 md:gap-5 text-sm text-gray-400">
-            <h1 onClick={() => navigate('/#services')} className='cursor-pointer'>Services</h1>
-            <h1 onClick={() => navigate('/#about')} className='cursor-pointer'>About us</h1>
-            <h1 onClick={() => navigate('/careers')} className='cursor-pointer'>Careers</h1>
+          <div className="flex-1 flex flex-col items-center sm:gap-2 md:gap-2 text-sm text-gray-400">
+            <div className='flex flex-col gap-2'>
+              <h1 onClick={() => navigate('/#services')} className='cursor-pointer'>Services</h1>
+              <h1 onClick={() => navigate('/#about')} className='cursor-pointer'>About us</h1>
+              <h1 onClick={() => navigate('/careers')} className='cursor-pointer'>Careers</h1>
+              <h1 onClick={() => navigate('/contact')} className='cursor-pointer'>Contact us</h1>
+            </div>
           </div>
-          <div className="start-end flex-1 flex justify-end sm:gap-8 md:gap-5 text-xl text-gray-400">
+          <div className="flex-1 flex flex-row justify-end items-end sm:gap-2 md:gap-2 text-xl text-gray-400">
             <FaLinkedinIn className="hover:text-white transition cursor-pointer" />
             <FaFacebookF className="hover:text-white transition cursor-pointer" />
             <FaInstagram className="hover:text-white transition cursor-pointer" />

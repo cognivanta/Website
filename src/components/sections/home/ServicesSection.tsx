@@ -129,7 +129,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ data, index, totalCount, prev
 
                     {/* Conditionally render the big GET IN TOUCH link on the last section */}
                     {isLastSection && (
-                        <div onClick={() => navigate('/contact?subject=Business Enquiry')} className="cursor-pointer mt-8 md:mt-16 w-full shrink-0">
+                        <div onClick={() => navigate('/contact')} className="cursor-pointer mt-8 md:mt-16 w-full shrink-0">
                             <a className="inline-block pt-5 w-full group items-center transition-all duration-300">
                                 <h2 className="text-center text-3xl sm:text-5xl md:text-7xl lg:text-7xl uppercase font-bold tracking-tight border-b-4 lg:border-b-8 border-transparent group-hover:border-current transition-all duration-300">
                                     GET IN TOUCH

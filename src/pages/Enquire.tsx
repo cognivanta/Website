@@ -44,6 +44,8 @@ const ClockIcon = () => (
 
 const Enquire: React.FC = () => {
     const [searchParams] = useSearchParams();
+    const subjectParam = searchParams.get('subject');
+    const showSubject = !!subjectParam;
     const [form, setForm] = useState({
         name: '',
         email: '',
@@ -57,11 +59,12 @@ const Enquire: React.FC = () => {
 
     // Pre-populate subject from ?subject= query param (accepts custom values too)
     useEffect(() => {
-        const subjectParam = searchParams.get('subject');
         if (subjectParam) {
             setForm(prev => ({ ...prev, subject: subjectParam }));
+        } else {
+            setForm(prev => ({ ...prev, subject: '' }));
         }
-    }, [searchParams]);
+    }, [subjectParam]);
 
     // Build the option list: include any custom subject not already in SUBJECTS
     const customSubject =
@@ -73,7 +76,7 @@ const Enquire: React.FC = () => {
         if (!form.email.trim()) e.email = 'Email is required.';
         else if (!/\S+@\S+\.\S+/.test(form.email)) e.email = 'Enter a valid email.';
         if (!form.mobile.trim()) e.mobile = 'Mobile number is required.';
-        if (!form.subject) e.subject = 'Please select a subject.';
+        if (showSubject && !form.subject) e.subject = 'Please select a subject.';
         if (!form.agreed) e.agreed = 'You must agree to the privacy policy.';
         return e;
     };
@@ -225,31 +228,33 @@ const Enquire: React.FC = () => {
                                                 />
                                             </Field>
 
-                                            {/* Subject */}
-                                            <Field label="Subject" htmlFor="subject" error={errors.subject}>
-                                                <div className="relative">
-                                                    <select
-                                                        id="subject"
-                                                        name="subject"
-                                                        value={form.subject}
-                                                        onChange={handleChange}
-                                                        className={inputCls(!!errors.subject) + ' appearance-none pr-10 cursor-pointer'}
-                                                    >
-                                                        <option value="" disabled>Select a subject</option>
-                                                        {customSubject && (
-                                                            <option key={customSubject} value={customSubject}>{customSubject}</option>
-                                                        )}
-                                                        {SUBJECTS.map(s => (
-                                                            <option key={s} value={s}>{s}</option>
-                                                        ))}
-                                                    </select>
-                                                    <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-subtext/60">
-                                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                                                        </svg>
-                                                    </span>
-                                                </div>
-                                            </Field>
+                                            {/* Subject – only shown when arriving via ?subject= param */}
+                                            {showSubject && (
+                                                <Field label="Subject" htmlFor="subject" error={errors.subject}>
+                                                    <div className="relative">
+                                                        <select
+                                                            id="subject"
+                                                            name="subject"
+                                                            value={form.subject}
+                                                            onChange={handleChange}
+                                                            className={inputCls(!!errors.subject) + ' appearance-none pr-10 cursor-pointer'}
+                                                        >
+                                                            <option value="" disabled>Select a subject</option>
+                                                            {customSubject && (
+                                                                <option key={customSubject} value={customSubject}>{customSubject}</option>
+                                                            )}
+                                                            {SUBJECTS.map(s => (
+                                                                <option key={s} value={s}>{s}</option>
+                                                            ))}
+                                                        </select>
+                                                        <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-subtext/60">
+                                                            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                                                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                </Field>
+                                            )}
 
                                             {/* Message */}
                                             <Field label="Message" htmlFor="your-message">
