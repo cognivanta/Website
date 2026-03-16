@@ -6,12 +6,14 @@ import Training from './pages/Training'
 import CourseDetail from './pages/CourseDetail'
 import Enquire from './pages/Enquire'
 import Careers from './pages/Careers'
+import ScrollToTop from './components/ScrollToTop'
 
 const App: React.FC = () => {
 
   return (
     <ReactLenis root options={{ lerp: 0.05, wheelMultiplier: 0.8 }}>
       <div className="min-h-screen w-full">
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/training" element={<Training />} />
