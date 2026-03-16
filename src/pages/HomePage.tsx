@@ -17,13 +17,14 @@ const HomePage: React.FC = () => {
     const scrollTo = (location.state as { scrollTo?: string } | null)?.scrollTo;
     if (!scrollTo) return;
 
-    // Small delay to allow sections to mount in the DOM
+    // Delay to allow page sections and Lenis to fully mount/initialize after navigation
     const timer = setTimeout(() => {
       const element = document.getElementById(scrollTo);
       if (element) {
-        lenis?.scrollTo(element, { immediate: false });
+        // offset: -80 accounts for the sticky navbar height so the section top reaches the viewport top
+        lenis?.scrollTo(element, { immediate: false, offset: -80 });
       }
-    }, 100);
+    }, 300);
 
     return () => clearTimeout(timer);
   }, [location.state, lenis]);
