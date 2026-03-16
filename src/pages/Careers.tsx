@@ -139,18 +139,18 @@ const WorkCultureSection: React.FC = () => (
         {/* Wave transition from beige → dark */}
         <WaveTop className="text-headline bg-background" />
 
-        <div className="bg-headline text-text-inverse w-full">
+        <div className="-mt-1 bg-headline text-text-inverse w-full">
             <div className="section-padding py-16 sm:py-24">
 
                 {/* Eyebrow */}
-                <div className="flex items-center gap-3 mb-10">
+                <div className="flex justify-center items-center gap-3 mb-10">
                     <DiamondIcon className="text-hovernavlink" />
                     <h2 className="text-xs md:text-sm font-nobile uppercase tracking-widest font-semibold">Our Drive</h2>
                 </div>
 
                 {/* Section headline */}
-                <div className="mb-12 md:mb-20">
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold uppercase leading-tight max-w-3xl">
+                <div className="flex justify-center text-center items-center mb-12 md:mb-20">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold uppercase">
                         Where passion meets purpose and <span className="text-hovernavlink">ideas come to life</span>.
                     </h2>
                 </div>
@@ -244,7 +244,7 @@ const JobCard: React.FC<{ job: JobListing }> = ({ job }) => {
 const OpenPositionsSection: React.FC = () => {
     const navigate = useNavigate()
     return (
-        <section id="open-positions" className="relative w-full bg-background font-sans section-padding py-16 sm:py-24">
+        <section id="open-positions" className="-mt-1 relative w-full bg-background font-sans section-padding py-16 sm:py-24">
 
             {/* Eyebrow */}
             <div className="w-full flex justify-center gap-3 mb-10">
@@ -263,21 +263,21 @@ const OpenPositionsSection: React.FC = () => {
             </div>
 
             {/* Job list */}
-            <div className="w-full border-b-2 border-border">
+            <div className="pt-10 w-full border-b-2 border-border">
                 {jobs.map((job) => (
                     <JobCard key={job.id} job={job} />
                 ))}
             </div>
 
             {/* General application CTA */}
-            <div
+            {/* <div
                 onClick={() => navigate('/contact?subject=Career Enquiry')}
                 className="cursor-pointer mt-16 w-full group"
             >
                 <h2 className="w-full py-5 text-center text-3xl sm:text-5xl md:text-7xl uppercase font-bold text-headline border-b-4 border-transparent group-hover:border-headline transition-all duration-300">
                     Drop Us Your CV
                 </h2>
-            </div>
+            </div> */}
         </section>
     )
 }
