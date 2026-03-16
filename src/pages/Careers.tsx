@@ -145,7 +145,7 @@ const WorkCultureSection: React.FC = () => (
                 {/* Eyebrow */}
                 <div className="flex items-center gap-3 mb-10">
                     <DiamondIcon className="text-hovernavlink" />
-                    <h2 className="text-xs md:text-sm font-nobile uppercase tracking-widest font-semibold">Our Culture</h2>
+                    <h2 className="text-xs md:text-sm font-nobile uppercase tracking-widest font-semibold">Our Drive</h2>
                 </div>
 
                 {/* Section headline */}
