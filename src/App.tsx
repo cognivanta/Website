@@ -6,6 +6,7 @@ import Training from './pages/Training'
 import CourseDetail from './pages/CourseDetail'
 import Enquire from './pages/Enquire'
 import Careers from './pages/Careers'
+import NotFound from './pages/NotFound'
 import ScrollToTop from './components/ScrollToTop'
 
 const App: React.FC = () => {
@@ -20,6 +21,7 @@ const App: React.FC = () => {
           <Route path="/training/:courseId" element={<CourseDetail />} />
           <Route path="/contact" element={<Enquire />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </ReactLenis>
