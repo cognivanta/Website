@@ -3,6 +3,7 @@ import logo from "../../assets/cognivanta.svg"
 import AnimatedText from '../text/AnimatedText';
 import { useLenis } from 'lenis/react';
 import { useNavigate } from 'react-router-dom';
+// import ScrollVelocity from '../text/ScrollVelocity';
 
 type NavLinkProps = {
   label: string;
@@ -71,6 +72,16 @@ const NavBar: React.FC = () => {
         <span
           className="flex font-normal tracking-wide uppercase whitespace-nowrap"
         >
+          {/* {label == "Careers" && 
+            <ScrollVelocity
+              texts={['We are Hiring']} 
+              velocity={50}
+              className="text-xs tracking-[0.2em] block"
+              numCopies={3}
+            />
+
+          }
+          {label != "Careers" && <AnimatedText text={label} className="text-xs tracking-[0.2em] block" />} */}
           <AnimatedText text={label} className="text-xs tracking-[0.2em] block" />
         </span>
       </a>
