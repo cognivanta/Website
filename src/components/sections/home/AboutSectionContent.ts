@@ -1,5 +1,5 @@
-import video1 from "../../../assets/aboutSection-video-1.mp4"
-import video2 from "../../../assets/aboutSection-video-2.mp4"
+import video1 from "../../../assets/aboutSection-video-1.webm"
+import video2 from "../../../assets/aboutSection-video-2.webm"
 
 export const aboutSections = [
     {

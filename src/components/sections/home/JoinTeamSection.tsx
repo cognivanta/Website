@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import backgroundVideo from "../../../assets/joinTeamSection-background.mp4"
+import backgroundVideo from "../../../assets/joinTeamSection-background.webm"
 
 gsap.registerPlugin(ScrollTrigger)
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-import video1 from "../../../assets/expertiseSection-video-1.mp4"
-import video2 from "../../../assets/expertiseSection-video-2.mp4"
+import video1 from "../../../assets/expertiseSection-video-1.webm"
+import video2 from "../../../assets/expertiseSection-video-2.webm"
 import { sections } from './ExpertiseSectionContent';
 
 const heroContant: string = "Turning  Imagination  into  Innovation  and  Innovation  into  Global  Impact."

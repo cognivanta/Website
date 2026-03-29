@@ -1,7 +1,7 @@
 import React from 'react'
-import subtextVideo from "../../../assets/heroSubtextHomePage.mp4"
-import video1 from '../../../assets/hero-Homepage-video-1.mp4'
-import video2 from '../../../assets/hero-Homepage-video-2.mp4'
+import subtextVideo from "../../../assets/heroSubtextHomePage.webm"
+import video1 from '../../../assets/hero-Homepage-video-1.webm'
+import video2 from '../../../assets/hero-Homepage-video-2.webm'
 
 const Hero: React.FC = () => {
   return (
