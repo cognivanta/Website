@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import NavBar from '../components/navigation/NavBar';
 import Footer from '../components/sections/home/Footer';
 
@@ -12,33 +12,33 @@ const SUBJECTS = [
 
 /* ── tiny reusable icon components ─────────────────────────────────────── */
 
-const PhoneIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" className="shrink-0 mt-0.5 text-[#ef7b01]" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5">
-        <path d="M7.492 10.013a2 2 0 0 0 0-2.829L5.37 5.063a2 2 0 0 0-2.828 0L1.378 6.227A3 3 0 0 0 1 10a46.5 46.5 0 0 0 13 13 3 3 0 0 0 3.773-.379l1.165-1.164a2 2 0 0 0 0-2.828l-2.122-2.121a2 2 0 0 0-2.828 0l-.707.707a47.418 47.418 0 0 1-6.5-6.5Z" />
-        <path d="M12 .5A11.5 11.5 0 0 1 23.5 12M12 4.5a7.5 7.5 0 0 1 7.5 7.5M12 8.5a3.5 3.5 0 0 1 3.5 3.5" />
-    </svg>
-);
+// const PhoneIcon = () => (
+//     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" className="shrink-0 mt-0.5 text-[#ef7b01]" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5">
+//         <path d="M7.492 10.013a2 2 0 0 0 0-2.829L5.37 5.063a2 2 0 0 0-2.828 0L1.378 6.227A3 3 0 0 0 1 10a46.5 46.5 0 0 0 13 13 3 3 0 0 0 3.773-.379l1.165-1.164a2 2 0 0 0 0-2.828l-2.122-2.121a2 2 0 0 0-2.828 0l-.707.707a47.418 47.418 0 0 1-6.5-6.5Z" />
+//         <path d="M12 .5A11.5 11.5 0 0 1 23.5 12M12 4.5a7.5 7.5 0 0 1 7.5 7.5M12 8.5a3.5 3.5 0 0 1 3.5 3.5" />
+//     </svg>
+// );
 
-const EmailIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" className="shrink-0 mt-0.5 text-[#ef7b01]" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5">
-        <rect x="2" y="4" width="20" height="16" rx="2" />
-        <path d="m2 7 10 7 10-7" />
-    </svg>
-);
+// const EmailIcon = () => (
+//     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" className="shrink-0 mt-0.5 text-[#ef7b01]" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5">
+//         <rect x="2" y="4" width="20" height="16" rx="2" />
+//         <path d="m2 7 10 7 10-7" />
+//     </svg>
+// );
 
-const MapPinIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" className="shrink-0 mt-0.5 text-[#ef7b01]" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5">
-        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Z" />
-        <circle cx="12" cy="9" r="2.5" />
-    </svg>
-);
+// const MapPinIcon = () => (
+//     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" className="shrink-0 mt-0.5 text-[#ef7b01]" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5">
+//         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Z" />
+//         <circle cx="12" cy="9" r="2.5" />
+//     </svg>
+// );
 
-const ClockIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" className="shrink-0 mt-0.5 text-[#ef7b01]" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M12 6v6l4 2" />
-    </svg>
-);
+// const ClockIcon = () => (
+//     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" className="shrink-0 mt-0.5 text-[#ef7b01]" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5">
+//         <circle cx="12" cy="12" r="10" />
+//         <path d="M12 6v6l4 2" />
+//     </svg>
+// );
 
 /* ── main component ─────────────────────────────────────────────────────── */
 
@@ -91,12 +91,12 @@ const Enquire: React.FC = () => {
         if (errors[target.name]) setErrors(prev => ({ ...prev, [target.name]: '' }));
     };
 
-    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const file = e.target.files?.[0] ?? null;
-        setAttachment(file);
-    };
+    // const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    //     const file = e.target.files?.[0] ?? null;
+    //     setAttachment(file);
+    // };
 
-    const [result, setResult] = useState("");
+    const [_result, setResult] = useState("");
     const handleSubmit = async (event: any) => {
         event.preventDefault();
 

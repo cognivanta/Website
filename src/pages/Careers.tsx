@@ -236,7 +236,7 @@ const JobCard: React.FC<{ job: JobListing }> = ({ job }) => {
 }
 
 const OpenPositionsSection: React.FC = () => {
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
     return (
         <section id="open-positions" className="-mt-1 relative w-full bg-background font-sans section-padding py-16 sm:py-24">
 

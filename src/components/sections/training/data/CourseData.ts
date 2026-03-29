@@ -1,7 +1,5 @@
 import frontendImg from '../../../../assets/training/frontend-cover.webp';
 import backendImg from '../../../../assets/training/backend-cover.webp';
-import fullstackImg from '../../../../assets/training/fullstack-cover.webp';
-import uiUxImg from '../../../../assets/training/ui-ux-cover.webp';
 import javaSpringBootImg from '../../../../assets/training/java-spring-boot-cover.webp';
 
 export interface SyllabusModule {
