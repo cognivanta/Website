@@ -17,10 +17,10 @@ const FooterRight: React.FC = () => {
 
         <div className="w-full font-nobile flex flex-row pt-2">
           <div className="flex-1 flex flex-col sm:gap-2 md:gap-2 text-sm text-gray-400">
-            <h1>Shivjot Enclaves,</h1>
-            <h1>Guru Teg Bahadur Nagar</h1>
-            <h1>Kharar, Dist. Mohali</h1>
-            <h1>Punjab, 140307</h1>
+            <h1>Sco 72, First Floor</h1>
+            <h1>Modern City Plaza</h1>
+            <h1>Kharar, Punjab</h1>
+            <h1>India 140301</h1>
           </div>
           <div className="flex-1 flex flex-col items-center sm:gap-2 md:gap-2 text-sm text-gray-400">
             <div className='flex flex-col gap-2'>
