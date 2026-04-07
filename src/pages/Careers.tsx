@@ -243,7 +243,7 @@ const OpenPositionsSection: React.FC = () => {
             {/* Eyebrow */}
             <div className="w-full flex justify-center gap-3 mb-10">
                 <DiamondIcon className="text-hovernavlink" />
-                <h2 className="text-xs md:text-sm font-nobile uppercase tracking-widest font-semibold text-headline">Open Positions</h2>
+                <h2 className="text-xs md:text-sm font-nobile uppercase tracking-widest font-semibold text-headline">Open Roles</h2>
             </div>
 
             {/* Section headline */}

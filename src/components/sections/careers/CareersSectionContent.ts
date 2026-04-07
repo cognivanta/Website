@@ -10,7 +10,7 @@ export interface JobListing {
 export const jobs: JobListing[] = [
     {
         id: 1,
-        title: 'Full-Stack Developer',
+        title: 'Junior Full-Stack Developer',
         department: 'Engineering',
         location: 'Mohali',
         type: 'Full-time',
@@ -19,29 +19,12 @@ export const jobs: JobListing[] = [
     },
     {
         id: 2,
-        title: 'UI/UX Designer',
+        title: 'Junior UI/UX Designer',
         department: 'Design',
         location: 'Mohali',
         type: 'Full-time',
         description:
             "Shape the visual identity and interaction patterns of our products. You'll translate complex requirements into intuitive, beautiful interfaces that delight users and drive engagement.",
     },
-    {
-        id: 3,
-        title: 'DevOps Engineer',
-        department: 'Infrastructure',
-        location: 'Hybrid',
-        type: 'Full-time',
-        description:
-            "Architect and maintain our cloud infrastructure, CI/CD pipelines, and observability stack. You'll keep our systems reliable, secure, and ready to scale.",
-    },
-    {
-        id: 4,
-        title: 'Business Development Executive',
-        department: 'Sales',
-        location: 'Mohali',
-        type: 'Full-time',
-        description:
-            "Identify and develop new business opportunities, build relationships with enterprise clients, and help expand Cognivanta's footprint across markets.",
-    },
+    
 ]

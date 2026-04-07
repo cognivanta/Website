@@ -96,7 +96,7 @@ const Training: React.FC = () => {
                             <h2 className="text-xs md:text-sm font-nobile uppercase tracking-widest text-headline font-semibold">Our Courses</h2>
                         </div>
                         <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-headline text-center mb-4">
-                            Explore Our Programs
+                            Explore Our Courses
                         </h3>
                         <p className="text-lg text-subtext text-center max-w-2xl mx-auto">
                             Comprehensive training modules designed to help you master the most in-demand industry skills.

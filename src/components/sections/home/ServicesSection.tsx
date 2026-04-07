@@ -88,17 +88,17 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ data, index, totalCount, prev
                     <div className="mb-6 lg:mb-12 shrink-0">
                         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-bold uppercase mb-4 flex flex-wrap items-center gap-x-4 gap-y-3 leading-none">
                             <span>{data.title1}</span>
-                            {data.video != "" && (
+                            {/* {data.video != "" && (
                                 <video
                                     className="w-24 sm:w-32 md:w-40 lg:w-[12rem] h-10 sm:h-12 md:h-16 lg:h-[4rem] object-cover rounded-full"
                                     src={data.video}
                                     autoPlay loop muted playsInline
                                 />
-                            )}
+                            )} */}
                             {/* placeholder for video to have gap between title1 and title2 */}
-                            {data.video == "" && (
+                            {/*{data.video == "" && (
                                 <div className="w-24 sm:w-32 md:w-40 lg:w-[12rem] h-10 sm:h-12 md:h-16 lg:h-[4rem] object-cover rounded-full"></div>
-                            )}
+                            )} */}
                             <span>{data.title2}</span>
                         </h2>
                         <h3 className="text-lg sm:text-xl md:text-2xl font-bold uppercase max-w-3xl opacity-90 leading-snug">{data.subtitle}</h3>
