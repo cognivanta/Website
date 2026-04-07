@@ -4,10 +4,11 @@ import { gsap } from "gsap"
 interface AnimatedTextProps {
     text: string;
     className?: string;
+    style?: React.CSSProperties;
     onClick?: () => void | Promise<void>;
 }
 
-export const AnimatedText = ({ text, className = "", onClick }: AnimatedTextProps) => {
+export const AnimatedText = ({ text, className = "", style, onClick }: AnimatedTextProps) => {
     const textRef = useRef<HTMLDivElement>(null)
 
     const handleEnter = () => {
@@ -41,6 +42,7 @@ export const AnimatedText = ({ text, className = "", onClick }: AnimatedTextProp
             ref={textRef}
             onMouseEnter={handleEnter}
             onClick={onClick}
+            style={style}
             className={`inline-block overflow-hidden cursor-pointer ${className}`}
         >
             {text.split("").map((letter, i) => (
