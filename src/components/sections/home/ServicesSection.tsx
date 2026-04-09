@@ -119,10 +119,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ data, index, totalCount, prev
                         </div>
 
                         {/* Text cols */}
-                        <div className="flex-1 text-justify font-nobile text-base sm:text-lg lg:text-xl leading-relaxed opacity-90">
+                        <div className="flex-1 text-justify font-nobile text-base text-lg leading-relaxed opacity-90">
                             <p>{data.desc1}</p>
                         </div>
-                        <div className="flex-1 text-justify font-nobile text-base sm:text-lg lg:text-xl leading-relaxed opacity-90">
+                        <div className="flex-1 text-justify font-nobile text-base text-lg leading-relaxed opacity-90">
                             <p>{data.desc2}</p>
                         </div>
                     </div>
@@ -131,7 +131,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ data, index, totalCount, prev
                     {isLastSection && (
                         <div onClick={() => navigate('/contact')} className="cursor-pointer mt-8 md:mt-16 w-full shrink-0">
                             <a className="inline-block pt-5 w-full group items-center transition-all duration-300">
-                                <h2 className="text-center text-3xl sm:text-5xl md:text-7xl lg:text-7xl uppercase font-bold tracking-tight border-b-4 lg:border-b-8 border-transparent group-hover:border-current transition-all duration-300">
+                                <h2 className="text-center text-6xl uppercase font-bold tracking-tight border-b-4 lg:border-b-8 border-transparent group-hover:border-current transition-all duration-300">
                                     GET IN TOUCH
                                 </h2>
                             </a>

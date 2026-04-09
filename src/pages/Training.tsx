@@ -44,13 +44,13 @@ const Training: React.FC = () => {
             {/* Hero Section */}
             <div className="relative min-h-[50vh] w-full flex items-center justify-center overflow-hidden pb-40 lg:pb-70">
                 <div className="relative w-full px-4 sm:px-6 lg:px-8 text-center z-10 pt-24 lg:pt-32">
-                    <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-headline mb-6">
+                    <h1 className="text-4xl md:text-5xl md:w-[75%] mx-auto font-extrabold tracking-tight text-headline mb-6">
                         Talent Incubation:  <span className="text-transparent bg-clip-text bg-linear-to-r from-[#ef7b01] to-orange-400"> Building Tomorrow's Experts Today</span>
                     </h1>
                     {/* <p className="mt-6 max-w-2xl text-lg md:text-xl text-subtext mx-auto mb-10 leading-relaxed font-nobile">
                         Our Talent Incubation program is designed to develop strong, industry-ready professionals through focused training and real-world learning. We equip individuals with the technical skills, practical knowledge, and confidence needed to succeed in a fast-evolving technology landscape.
                     </p> */}
-                    <p className="mt-6 max-w-2xl text-lg md:text-xl text-subtext mx-auto mb-10 leading-relaxed font-nobile">
+                    <p className="mt-6 max-w-4xl text-lg md:text-xl justify-center text-subtext mx-auto mb-10 leading-relaxed font-nobile">
                         {/* <b>Our Incubation Philosophy</b> */}
                         <br></br>
                         <i>Whether you're launching your tech career or accelerating it, our training ecosystem is built to close skill gaps, sharpen expertise, and deliver results that industry demands.</i>

@@ -81,11 +81,11 @@ const ServicesScroll: React.FC = () => {
             {/* 0{activeIndex}/0{sections.length} */}
           </div>
           {/* Anchor Links */}
-          <div className="hidden md:flex flex-col gap-4 mt-auto mb-[5rem]">
+          <div className="hidden md:flex flex-col gap-4 mt-auto mb-[3rem]">
             {sections.map((sec) => (
               <div
                 key={sec.id}
-                className={`font-nobile transition-opacity duration-300 ${activeIndex === sec.id ? 'opacity-100' : 'opacity-20'}`}
+                className={`font-nobile text-sm transition-opacity duration-300 ${activeIndex === sec.id ? 'opacity-100' : 'opacity-20'}`}
               >
                 {sec.title}
               </div>
@@ -93,7 +93,7 @@ const ServicesScroll: React.FC = () => {
           </div>
           {/* Get In Touch Button */}
           <div onClick={() => navigate('/contact')} className='cursor-pointer sm:self-end flex items-center justify-center md:w-full sm:w-fit bg-headline text-text-inverse py-3 px-6 md:px-0'>
-            <button className='cursor-pointer w-fit uppercase text-center font-bold'>get in touch</button>
+            <button className='cursor-pointer w-fit uppercase text-sm text-center font-light'>get in touch</button>
           </div>
         </div>
       </div>
@@ -110,7 +110,7 @@ const ServicesScroll: React.FC = () => {
             <p className="text-xl md:text-3xl w-full font-bold uppercase mb-6 text-left">{sec.title}</p>
             <div className="flex flex-col gap-4 font-nobile text-justify">
               {sec.content.map((paragraph, index) => (
-                <p key={index} className="text-xl">
+                <p key={index} className="text-sm">
                   {paragraph}
                 </p>
               ))}

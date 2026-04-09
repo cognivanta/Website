@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
         {/* Col 3 — Offices + social icons */}
         <div className="flex flex-col gap-4">
           <p className="text-white text-xs font-semibold uppercase tracking-widest mb-1">
-            Our Offices
+            Get In Touch
           </p>
 
           {/* India */}
@@ -153,7 +153,7 @@ const Footer: React.FC = () => {
               instagram.com/cognivanta_technologies
             </a> */}
 
-            <div className='flex flex-col'>
+            <div className='flex flex-col items-center'>
               {/* <p className='text-sm text-gray-400 hover:text-white transition-colors group'>Follow us on</p> */}
               <div className='flex gap-6'>
                 <a href="https://www.linkedin.com/in/cognivanta-technologies-834178364/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
