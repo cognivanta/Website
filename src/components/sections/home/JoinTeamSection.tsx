@@ -55,7 +55,7 @@ const JoinTeamSection: React.FC = () => {
             {/* SVG Animation */}
 
 
-            <div ref={contentRef} className="flex flex-col items-center justify-center w-full min-h-[50vh] p-0.5 relative z-10 bg-transparent ">
+            <div ref={contentRef} className="flex flex-col items-center justify-center w-full min-h-[50vh] md:w-[70%] md:h-[70%] p-0.5 relative z-10 bg-transparent ">
                 {/* Top details SVG */}
                 <div className="w-[80%] lg:w-[60%] overflow-hidden leading-none pointer-events-none translate-y-1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" preserveAspectRatio="none" viewBox="0 0 1440 179" fill="none" className="hidden md:block w-full">
@@ -78,16 +78,16 @@ const JoinTeamSection: React.FC = () => {
                         </svg>
                         <h2 className="text-xs md:text-sm font-nobile uppercase tracking-widest text-headline font-nobile font-semibold">Join Our Team</h2>
                     </div>
-                    <div className='flex flex-col text-center sm:text-2xl text-4xl wrap-break-word'>
-                        <h2>We're building something</h2>
-                        <h2>great — and we want</h2>
-                        <h2>you to be part of it</h2>
+                    <div className='flex flex-col text-center text-2xl text-wrap '>
+                        <h2>We're building something great</h2>
+                        <h2> and we want you to </h2>
+                        <h2>be part of it</h2>
                     </div>
                     <a
                         href="/careers"
                         className="inline-block w-full mt-4 group transition-all duration-300 pointer-events-auto"
                     >
-                        <h2 className="w-full pb-[10%] text-center text-5xl md:text-7xl lg:text-8xl uppercase font-bold text-headline transition-all duration-300">
+                        <h2 className="w-full pb-[10%] text-center text-2xl md:text-3xl lg:text-4xl uppercase font-bold text-headline transition-all duration-300">
                             Open Jobs
                         </h2>
                     </a>

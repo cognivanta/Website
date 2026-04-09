@@ -101,7 +101,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ data, index, totalCount, prev
                             )} */}
                             <span>{data.title2}</span>
                         </h2>
-                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold uppercase max-w-3xl opacity-90 leading-snug">{data.subtitle}</h3>
+                        <h3 className="text-lg md:text-xl font-bold uppercase max-w-3xl opacity-90 leading-snug">{data.subtitle}</h3>
                     </div>
 
                     {/* Two Column details with icon */}
@@ -119,10 +119,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ data, index, totalCount, prev
                         </div>
 
                         {/* Text cols */}
-                        <div className="flex-1 font-nobile text-base sm:text-lg lg:text-xl leading-relaxed opacity-90">
+                        <div className="flex-1 text-justify font-nobile text-base sm:text-lg lg:text-xl leading-relaxed opacity-90">
                             <p>{data.desc1}</p>
                         </div>
-                        <div className="flex-1 font-nobile text-base sm:text-lg lg:text-xl leading-relaxed opacity-90">
+                        <div className="flex-1 text-justify font-nobile text-base sm:text-lg lg:text-xl leading-relaxed opacity-90">
                             <p>{data.desc2}</p>
                         </div>
                     </div>

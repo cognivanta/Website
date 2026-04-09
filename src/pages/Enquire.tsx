@@ -415,7 +415,7 @@ function Field({
     children: React.ReactNode;
 }) {
     return (
-        <label className="flex flex-col gap-1.5" htmlFor={htmlFor}>
+        <label className="flex flex-col" htmlFor={htmlFor}>
             <span className="text-sm font-light text-headline">{label}</span>
             {children}
             {error && <p className="text-xs text-red-500">{error}</p>}
@@ -426,7 +426,7 @@ function Field({
 /* ── helper: input class string ─────────────────────────────────────────── */
 function inputCls(hasError: boolean) {
     return [
-        'w-full py-3 border-border border-b-1 bg-background text-headline text-sm',
+        'w-full py-1 border-border border-b-1 bg-background text-headline text-sm',
         'placeholder:text-subtext/50',
         'focus:outline-none transition-all',
         hasError

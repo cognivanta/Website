@@ -76,16 +76,16 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Description text */}
-        <div className="font-nobile flex flex-col gap-1 w-full sm:w-[35%] md:w-[40%] text-lg sm:text-lg text-subtext sm:text-right md:text-justify leading-[1.5]">
+        <div className="font-nobile flex flex-col gap-1 w-full sm:w-[35%] md:w-[40%] text-sm text-subtext sm:text-right md:text-justify leading-[1.5]">
 
           <p>
-            At <b>Cognivanta</b>, we empower organizations with <b>next-generation technology solutions</b> that drive transformation, enhance operational excellence, and create sustainable competitive advantage.
+            At Cognivanta, we empower organizations with next-generation technology solutions that drive transformation, enhance operational excellence, and create sustainable competitive advantage.
           </p>
           <p>
-            We design and develop <b>bespoke software solutions</b> that streamline complex processes, optimize resources, reduce costs, and unlock new growth opportunities.
+            We design and develop bespoke software solutions that streamline complex processes, optimize resources, reduce costs, and unlock new growth opportunities.
           </p>
           <p>
-            Our commitment is not just to deliver software — but to <b>deliver measurable business impact</b>.
+            Our commitment is not just to deliver software — but to deliver measurable business impact.
           </p>
           
         </div>
