@@ -4,6 +4,7 @@ import { useLenis } from 'lenis/react'
 import { FaLinkedinIn, FaFacebookF, FaInstagram } from 'react-icons/fa'
 import logoFooter from '../../../assets/logo-footer.svg'
 import { FaLocationDot } from 'react-icons/fa6'
+import { trackEvent } from '../../../utils/analytics'
 
 
 const capabilities = [
@@ -18,7 +19,8 @@ const Footer: React.FC = () => {
   const navigate = useNavigate()
   const lenis = useLenis()
 
-  const handleNavClick = (to: string) => {
+  const handleNavClick = (to: string, label?: string) => {
+    trackEvent('click_footer_link', { link_url: to, link_text: label || to });
     if (to.startsWith('/#')) {
       const sectionId = to.substring(2)
       if (window.location.pathname === '/') {
@@ -66,7 +68,7 @@ const Footer: React.FC = () => {
           ].map(({ label, to }) => (
             <span
               key={label}
-              onClick={() => handleNavClick(to)}
+              onClick={() => handleNavClick(to, label)}
               className="text-sm text-gray-400 hover:text-white transition-colors cursor-pointer w-fit"
             >
               {label}
@@ -156,17 +158,17 @@ const Footer: React.FC = () => {
             <div className='flex flex-col items-center'>
               {/* <p className='text-sm text-gray-400 hover:text-white transition-colors group'>Follow us on</p> */}
               <div className='flex gap-6'>
-                <a href="https://www.linkedin.com/in/cognivanta-technologies-834178364/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
+                <a href="https://www.linkedin.com/in/cognivanta-technologies-834178364/" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click_social', { network: 'LinkedIn' })} className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
                   <span className="w-9 h-9 flex items-center justify-center shrink-0 border border-gray-700 rounded-full group-hover:border-white transition-all">
                     <FaLinkedinIn size={18} />
                   </span>
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=61575358813487" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
+                <a href="https://www.facebook.com/profile.php?id=61575358813487" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click_social', { network: 'Facebook' })} className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
                   <span className="w-9 h-9 flex items-center justify-center shrink-0 border border-gray-700 rounded-full group-hover:border-white transition-all">
                     <FaFacebookF size={18} />
                   </span>
                 </a>
-                <a href="https://www.instagram.com/cognivanta_technologies/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
+                <a href="https://www.instagram.com/cognivanta_technologies/" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click_social', { network: 'Instagram' })} className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
                   <span className="w-9 h-9 flex items-center justify-center shrink-0 border border-gray-700 rounded-full group-hover:border-white transition-all">
                     <FaInstagram size={18} />
                   </span>

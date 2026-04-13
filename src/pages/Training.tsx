@@ -5,6 +5,7 @@ import { coursesData } from '../components/sections/training/data/CourseData';
 import NavBar from '../components/navigation/NavBar';
 import Footer from '../components/sections/home/Footer';
 import TrainingFeatures from '../components/sections/training/TrainingFeatures';
+import { trackEvent } from '../utils/analytics';
 
 const Training: React.FC = () => {
     const navigate = useNavigate();
@@ -57,12 +58,21 @@ const Training: React.FC = () => {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                         <button
-                            onClick={() => document.getElementById('courses-section')?.scrollIntoView({ behavior: 'smooth' })}
+                            onClick={() => {
+                                trackEvent('click_button', { button_name: 'Explore Courses' });
+                                document.getElementById('courses-section')?.scrollIntoView({ behavior: 'smooth' });
+                            }}
                             className="cursor-pointer w-full sm:w-auto px-8 py-3.5 bg-[#ef7b01] hover:bg-orange-500 text-white rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-orange-500/20 hover:-translate-y-1"
                         >
                             Explore Our Courses
                         </button>
-                        <button onClick={() => navigate(`/contact?subject=Enquire About Training`)} className="cursor-pointer w-full sm:w-auto px-8 py-3.5 bg-transparent hover:bg-headline text-headline hover:text-white border border-headline rounded-xl font-bold text-lg transition-all hover:-translate-y-1">
+                        <button
+                            onClick={() => {
+                                trackEvent('click_button', { button_name: 'Enquire About Training' });
+                                navigate(`/contact?subject=Enquire About Training`);
+                            }}
+                            className="cursor-pointer w-full sm:w-auto px-8 py-3.5 bg-transparent hover:bg-headline text-headline hover:text-white border border-headline rounded-xl font-bold text-lg transition-all hover:-translate-y-1"
+                        >
                             Enquire Now
                         </button>
                     </div>

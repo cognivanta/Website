@@ -3,6 +3,7 @@ import NavBar from '../components/navigation/NavBar'
 import Footer from '../components/sections/home/Footer'
 import { useNavigate } from 'react-router-dom'
 import { jobs, type JobListing } from '../components/sections/careers/CareersSectionContent'
+import { trackEvent } from '../utils/analytics'
 
 // ─── Diamond SVG icon (same as JoinTeamSection) ───────────────────────────────
 const DiamondIcon: React.FC<{ className?: string }> = ({ className = '' }) => (
@@ -218,7 +219,10 @@ const JobCard: React.FC<{ job: JobListing }> = ({ job }) => {
                 {/* Right: actions */}
                 <div className="flex flex-row md:flex-col items-center md:items-end gap-3 shrink-0">
                     <button
-                        onClick={() => navigate('/contact?subject=Career Enquiry for - ' + job.title)}
+                        onClick={() => {
+                            trackEvent('click_button', { button_name: 'Apply Now', job_title: job.title });
+                            navigate('/contact?subject=Career Enquiry for - ' + job.title);
+                        }}
                         className="cursor-pointer flex items-center justify-center bg-headline text-text-inverse py-3 px-6 hover:bg-hovernavlink transition-colors duration-300"
                     >
                         <span className="uppercase font-bold text-sm tracking-widest whitespace-nowrap">Apply Now</span>

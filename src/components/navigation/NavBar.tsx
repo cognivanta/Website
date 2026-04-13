@@ -3,6 +3,7 @@ import logo from "../../assets/cognivanta.svg"
 import AnimatedText from '../text/AnimatedText';
 import { useLenis } from 'lenis/react';
 import { useNavigate } from 'react-router-dom';
+import { trackEvent } from '../../utils/analytics';
 // import ScrollVelocity from '../text/ScrollVelocity';
 
 type NavLinkProps = {
@@ -46,6 +47,11 @@ const NavBar: React.FC = () => {
     const navigate = useNavigate();
 
     const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+      trackEvent('click_nav_link', {
+        link_url: href,
+        link_text: label
+      });
+
       if (href.startsWith('/#')) {
         e.preventDefault();
         const sectionId = href.substring(2); // Remove '/#'
@@ -102,7 +108,8 @@ const NavBar: React.FC = () => {
           <div className="flex items-center justify-between gap-8 pt-5">
 
             {/* Logo */}
-            <a href="/" className="relative w-12 shrink-0 text-neutral-900 no-underline">
+            <a href="/" onClick={() => trackEvent("click_button", { button_name: 'Home Logo', clicked_from_route: location.pathname })}
+              className="relative w-12 shrink-0 text-neutral-900 no-underline">
               <img src={logo} />
             </a>
 

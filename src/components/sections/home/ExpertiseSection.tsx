@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import video1 from "../../../assets/expertiseSection-video-1.webm"
 import video2 from "../../../assets/expertiseSection-video-2.webm"
 import { sections } from './ExpertiseSectionContent';
+import { trackEvent } from '../../../utils/analytics';
+
 
 const heroContant: string = "Turning  Imagination  into  Innovation  and  Innovation  into  Global  Impact."
 const heroDesWords: string[] = heroContant.split(" ")
@@ -45,6 +47,11 @@ const ServicesScroll: React.FC = () => {
   const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(1);
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const handleClickGetInTouch = () => {
+    trackEvent('click_button', { button_name: 'Expertise Section - Get In Touch' });
+    navigate('/contact');
+  }
 
   // Intersection Observer to detect which section is in view
   useEffect(() => {
@@ -92,7 +99,7 @@ const ServicesScroll: React.FC = () => {
             ))}
           </div>
           {/* Get In Touch Button */}
-          <div onClick={() => navigate('/contact')} className='cursor-pointer sm:self-end flex items-center justify-center md:w-full sm:w-fit bg-headline text-text-inverse py-3 px-6 md:px-0'>
+          <div onClick={handleClickGetInTouch} className='cursor-pointer sm:self-end flex items-center justify-center md:w-full sm:w-fit bg-headline text-text-inverse py-3 px-6 md:px-0'>
             <button className='cursor-pointer w-fit uppercase text-sm text-center font-light'>get in touch</button>
           </div>
         </div>

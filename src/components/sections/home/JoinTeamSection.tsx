@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import backgroundVideo from "../../../assets/joinTeamSection-background.webm"
+import { trackEvent } from '../../../utils/analytics'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -85,6 +86,7 @@ const JoinTeamSection: React.FC = () => {
                     </div>
                     <a
                         href="/careers"
+                        onClick={() => trackEvent('click_button', { button_name: 'Open Jobs (Home)' })}
                         className="inline-block w-full mt-4 group transition-all duration-300 pointer-events-auto"
                     >
                         <h2 className="w-full pb-[10%] text-center text-2xl md:text-3xl lg:text-4xl uppercase font-bold text-headline transition-all duration-300">

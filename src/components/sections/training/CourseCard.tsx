@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { type CourseData } from './data/CourseData';
 import { AiFillStar } from 'react-icons/ai';
+import { trackEvent } from '../../../utils/analytics';
 
 const CourseCard: React.FC<CourseData> = ({
   imageSrc,
@@ -51,6 +52,7 @@ const CourseCard: React.FC<CourseData> = ({
         {/* Bottom Row: Button */}
         <div className="mt-auto pt-4 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-end gap-4">
           <Link
+            onClick={() => trackEvent('click_course_card', { course_name: title })}
             className="flex items-center justify-center border border-headline text-headline hover:bg-headline hover:text-white px-6 py-2 uppercase text-xs tracking-widest font-semibold transition-all duration-300"
             to={link}
           >

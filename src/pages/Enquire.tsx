@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import NavBar from '../components/navigation/NavBar';
 import Footer from '../components/sections/home/Footer';
+import { trackEvent } from '../utils/analytics';
 
 const SUBJECTS = [
     "Business Enquiry",
@@ -133,6 +134,7 @@ const Enquire: React.FC = () => {
             if (data.success) {
                 setResult("Success!");
                 setSubmitted(true);
+                trackEvent('form_submit', { form_name: 'Enquire', value: form.subject });
             } else {
                 // This will tell you exactly WHY it's a 400 error (e.g. "Email required")
                 setResult("Error: " + data.message);
