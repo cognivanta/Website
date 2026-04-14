@@ -2,22 +2,24 @@ import React from 'react'
 import subtextVideo from "../../../assets/heroSubtextHomePage.webm"
 import video1 from '../../../assets/hero-Homepage-video-1.webm'
 import video2 from '../../../assets/hero-Homepage-video-2.webm'
+import heroSvg from '../../../assets/hero.svg'
 
 const Hero: React.FC = () => {
   return (
     <section className="relative w-full min-h-screen bg-background flex flex-col md:justify-between py-6 sm:py-10 section-padding">
+      <img src={heroSvg} alt="" className='absolute z-0  w-[50%] h-[50%] opacity-60 mt-8 rotate-25' />
 
       {/* hero top text */}
       <div className="relative flex flex-col">
         {/* "we are Cognivanta" label */}
-        <div className="font-nobile text-xs sm:text-sm tracking-widest uppercase text-lighttext mb-4 sm:mb-6">
+        <div className="font-nobile text-xs sm:text-sm tracking-widest uppercase mb-4 sm:mb-6">
           BEYOND CODE. COGNIVANTA.
         </div>
 
         {/* Main headline */}
         <div
           className="flex flex-col font-semibold uppercase text-right
-            text-5xl md:text-8xl
+            text-4xl md:text-7xl
             text-[#1F1D1E]"
         >
           {/* Row 1: "we [video] Design" */}
