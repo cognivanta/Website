@@ -285,7 +285,7 @@ const JobCard: React.FC<{ job: JobListing }> = ({ job }) => {
                         onClick={() => setExpanded(!expanded)}
                         className="cursor-pointer font-nobile text-sm text-lighttext uppercase tracking-widest hover:text-hovernavlink transition-colors duration-300"
                     >
-                        {expanded ? 'Hide ↑' : 'Details ↓'}
+                        {expanded ? 'Show Less ↑' : 'Details ↓'}
                     </button>
                 </div>
             </div>

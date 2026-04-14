@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
       {/* hero top text */}
       <div className="relative flex flex-col">
         {/* "we are Cognivanta" label */}
-        <div className="font-nobile text-xs sm:text-sm tracking-widest uppercase mb-4 sm:mb-6">
+        <div className="font-nobile text-xs sm:text-sm xl:text-xs tracking-widest uppercase mb-4 sm:mb-6">
           BEYOND CODE. COGNIVANTA.
         </div>
 
