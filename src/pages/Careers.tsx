@@ -190,31 +190,85 @@ const JobCard: React.FC<{ job: JobListing }> = ({ job }) => {
     return (
         <div className="border-t-2 border-border py-8 group">
             <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8">
+
                 {/* Left: title & tags */}
                 <div className="flex-1">
                     <h3 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase mb-4 tracking-tight text-headline">
                         {job.title}
                     </h3>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                        {/* Department tag */}
-                        <span className="px-3 py-1 border border-headline/30 rounded-full text-xs font-nobile uppercase tracking-widest text-subtext">
+
+                    {/* Tags */}
+                    <div className="flex flex-wrap items-center gap-2 mb-6">
+
+                        {/* Department */}
+                        <span className="px-3 py-[6px] rounded-full text-[13px] font-medium tracking-wide bg-headline/5 text-headline border border-headline/10">
                             {job.department}
                         </span>
-                        {/* Location tag */}
-                        <span className="px-3 py-1 border border-headline/30 rounded-full text-xs font-nobile uppercase tracking-widest text-subtext">
+
+                        {/* Location */}
+                        <span className="px-3 py-[6px] rounded-full text-[13px] font-medium tracking-wide bg-headline/5 text-headline border border-headline/10">
                             📍 {job.location}
                         </span>
-                        {/* Type tag */}
-                        <span className="px-3 py-1 bg-hovernavlink/10 border border-hovernavlink/30 rounded-full text-xs font-nobile uppercase tracking-widest text-hovernavlink">
+
+                        {/* Type */}
+                        <span className="px-3 py-[6px] rounded-full text-[13px] font-semibold tracking-wide bg-hovernavlink/10 text-hovernavlink border border-hovernavlink/20">
                             {job.type}
                         </span>
+
+                        {/* Experience */}
+                        <span className="px-3 py-[6px] rounded-full text-[13px] font-semibold tracking-wide bg-hovernavlink/10 text-hovernavlink border border-hovernavlink/20">
+                            {job.experience}
+                        </span>
+
                     </div>
 
-                    {/* Expandable description */}
-                    <div className={`font-nobile text-subtext text-base leading-relaxed overflow-hidden transition-all duration-300 ${expanded ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'}`}>
-                        <p>{job.description}</p>
+                    {/* Expandable Section */}
+                    <div
+                        className={`overflow-hidden transition-all duration-500 ${expanded ? "max-h-[500px] opacity-100 mt-4" : "max-h-0 opacity-0"
+                            }`}
+                    >
+                        {/* Description */}
+                        <p className="font-nobile text-subtext text-base leading-relaxed mb-6">
+                            {job.description}
+                        </p>
+
+                        {/* Skills */}
+                        <div className="mb-6">
+                            <h4 className="text-sm font-semibold uppercase tracking-widest text-headline mb-3">
+                                Skills
+                            </h4>
+                            <div className="flex flex-wrap gap-2">
+                                {job.skills.map((skill, i) => (
+                                    <span
+                                        key={i}
+                                        className="px-3 py-1 text-xs rounded-full bg-headline/5 border border-headline/20 text-subtext"
+                                    >
+                                        {skill}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Responsibilities */}
+                        <div>
+                            <h4 className="text-sm font-semibold uppercase tracking-widest text-headline mb-3">
+                                Responsibilities
+                            </h4>
+                            <ul className="space-y-2">
+                                {job.responsibilities.map((item, i) => (
+                                    <li
+                                        key={i}
+                                        className="flex items-start gap-2 text-subtext font-zest text-sm"
+                                    >
+                                        <span className="mt-1 text-hovernavlink">•</span>
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                 </div>
+
 
                 {/* Right: actions */}
                 <div className="flex flex-row md:flex-col items-center md:items-end gap-3 shrink-0">
