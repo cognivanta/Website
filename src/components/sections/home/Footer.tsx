@@ -155,22 +155,22 @@ const Footer: React.FC = () => {
               instagram.com/cognivanta_technologies
             </a> */}
 
-            <div className='flex flex-col items-center'>
+            <div className='flex flex-col items-left'>
               {/* <p className='text-sm text-gray-400 hover:text-white transition-colors group'>Follow us on</p> */}
               <div className='flex gap-6'>
                 <a href="https://www.linkedin.com/in/cognivanta-technologies-834178364/" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click_social', { network: 'LinkedIn' })} className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
-                  <span className="w-9 h-9 flex items-center justify-center shrink-0 border border-gray-700 rounded-full group-hover:border-white transition-all">
-                    <FaLinkedinIn size={18} />
+                  <span className="w-7 h-7 flex items-center justify-center shrink-0 border border-gray-700 rounded-full group-hover:border-white transition-all">
+                    <FaLinkedinIn size={12} />
                   </span>
                 </a>
                 <a href="https://www.facebook.com/profile.php?id=61575358813487" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click_social', { network: 'Facebook' })} className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
-                  <span className="w-9 h-9 flex items-center justify-center shrink-0 border border-gray-700 rounded-full group-hover:border-white transition-all">
-                    <FaFacebookF size={18} />
+                  <span className="w-7 h-7 flex items-center justify-center shrink-0 border border-gray-700 rounded-full group-hover:border-white transition-all">
+                    <FaFacebookF size={12} />
                   </span>
                 </a>
                 <a href="https://www.instagram.com/cognivanta_technologies/" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click_social', { network: 'Instagram' })} className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
-                  <span className="w-9 h-9 flex items-center justify-center shrink-0 border border-gray-700 rounded-full group-hover:border-white transition-all">
-                    <FaInstagram size={18} />
+                  <span className="w-7 h-7 flex items-center justify-center shrink-0 border border-gray-700 rounded-full group-hover:border-white transition-all">
+                    <FaInstagram size={12} />
                   </span>
                 </a>
               </div>
@@ -186,9 +186,9 @@ const Footer: React.FC = () => {
             <img
               src={logoFooter}
               alt="Cognivanta"
-              className="w-36 sm:w-40 object-contain"
+              className="w-24 sm:w-24 md:w-40 object-contain"
             />
-            <p className="text-3xl  justify-center text-gray-300 font-medium tracking-wide">
+            <p className="text-xl sm:text-2xl justify-center text-gray-300 font-medium tracking-wide">
               Cognivanta
             </p>
           </div>
