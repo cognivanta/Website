@@ -41,14 +41,14 @@ const Footer: React.FC = () => {
       <div className="w-full px-8 sm:px-12 pt-14 pb-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
 
         {/* Col 1 — Our Capabilities */}
-        <div className="flex flex-col gap-3">
-          <p className="text-white text-xs font-semibold uppercase tracking-widest mb-2">
+        <div className="flex flex-col gap-1">
+          <p className="text-white text-md font-bold uppercase mb-2">
             Our Capabilities
           </p>
           {capabilities.map((cap) => (
             <span
               key={cap}
-              className="text-sm text-gray-400 hover:text-white transition-colors cursor-default leading-snug"
+              className="text-sm text-gray-400 hover:text-white transition-colors cursor-default leading-loose"
             >
               {cap}
             </span>
@@ -56,8 +56,8 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Col 2 — About / Quick Links */}
-        <div className="flex flex-col gap-3">
-          <p className="text-white text-xs font-semibold uppercase tracking-widest mb-2">
+        <div className="flex flex-col gap-1">
+          <p className="text-white text-md font-bold uppercase mb-2">
             Cognivanta
           </p>
           {[
@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
             <span
               key={label}
               onClick={() => handleNavClick(to, label)}
-              className="text-sm text-gray-400 hover:text-white transition-colors cursor-pointer w-fit"
+              className="text-sm text-gray-400 hover:text-white transition-colors cursor-pointer w-fit leading-loose"
             >
               {label}
             </span>
@@ -77,23 +77,23 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Col 3 — Offices + social icons */}
-        <div className="flex flex-col gap-4">
-          <p className="text-white text-xs font-semibold uppercase tracking-widest mb-1">
+        <div className="flex flex-col gap-1">
+          <p className="text-white text-md font-bold uppercase mb-2">
             Get In Touch
           </p>
 
           {/* India */}
-          <a className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
-            <div className="flex items-center gap-2.5">
-              <span className="w-7 h-7 flex items-center justify-center shrink-0 border border-gray-700 rounded-full group-hover:border-white transition-all">
+          <a className="flex gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group leading-loose">
+            <div className="flex items-center gap-2.5 leading-normal">
+              <span className="w-7 h-7 flex items-center justify-center shrink-0 border-none border-gray-700 rounded-full group-hover:border-white transition-all">
                 <FaLocationDot size={12} />
               </span>
               Sco 72, First Floor, Modern City Plaza, Kharar, Punjab, India
             </div>
           </a>
           {/* Phone */}
-            <a href="tel:+916239673214" className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
-              <span className="w-7 h-7 flex items-center justify-center shrink-0 border border-gray-700 rounded-full group-hover:border-white transition-all">
+            <a href="tel:+916239673214" className="flex gap-2.5 items-center text-sm text-gray-400 hover:text-white transition-colors group">
+              <span className="w-7 h-7 flex items-center justify-center shrink-0 border-none border-gray-700 rounded-full group-hover:border-white transition-all">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.29 6.29l1-1.01a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
                 </svg>
@@ -102,16 +102,24 @@ const Footer: React.FC = () => {
             </a>
 
           {/* Belgium */}
-          <a className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
-            <span className="w-7 h-7 flex items-center justify-center shrink-0 border border-gray-700 rounded-full group-hover:border-white transition-all">
+          {/* <a className="flex gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
+            <span className="w-7 h-7 flex  justify-center shrink-0 border border-gray-700 rounded-full group-hover:border-white transition-all">
               <FaLocationDot size={12} />
             </span>
             Vandijckstraat 1, Oostende, 8400, Belgium, France, Europe
+          </a> */}
+          <a className="flex gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
+            <div className="flex gap-2.5 items-center leading-normal">
+              <span className="w-7 h-7 flex items-center justify-center shrink-0 border-none border-gray-700 rounded-full group-hover:border-white transition-all">
+                <FaLocationDot size={12} />
+              </span>
+              Vandijckstraat 1, Oostende, 8400, Belgium, France, Europe
+            </div>
           </a>
 
           {/* Phone */}
-            <a href="tel:+32485555918" className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
-              <span className="w-7 h-7 flex items-center justify-center shrink-0 border border-gray-700 rounded-full group-hover:border-white transition-all">
+            <a href="tel:+32485555918" className="flex gap-2.5 items-center text-sm text-gray-400 hover:text-white transition-colors group">
+              <span className="w-7 h-7 flex items-center justify-center shrink-0 border-none border-gray-700 rounded-full group-hover:border-white transition-all">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.29 6.29l1-1.01a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
                 </svg>
@@ -119,18 +127,46 @@ const Footer: React.FC = () => {
               +32 485 55 59 18
             </a>
 
-          {/* Contact + Social rows */}
-          <div className="flex flex-col gap-2.5 mt-2">
-
             {/* Email */}
-            <a href="mailto:hr.cognivanta@gmail.com" className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
-              <span className="w-7 h-7 flex items-center justify-center shrink-0 border border-gray-700 rounded-full group-hover:border-white transition-all">
+            <a href="mailto:hr.cognivanta@gmail.com" className="flex gap-2.5 items-center text-sm text-gray-400 hover:text-white transition-colors group">
+              <span className="w-7 h-7 flex items-center justify-center shrink-0 border-none border-gray-700 rounded-full group-hover:border-white transition-all">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="2" y="4" width="20" height="16" rx="2" /><path d="m2 7 10 7 10-7" />
                 </svg>
               </span>
               hr.cognivanta@gmail.com
             </a>
+
+            <a href="https://www.linkedin.com/in/cognivanta-technologies-834178364/" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click_social', { network: 'LinkedIn' })} className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
+                  <span className="w-7 h-7 flex items-center justify-center shrink-0 border-none border-gray-700 rounded-full group-hover:border-white transition-all">
+                    <FaLinkedinIn size={12} />
+                  </span>
+                  linkedin.com/cognivanta
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61575358813487" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click_social', { network: 'Facebook' })} className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
+                  <span className="w-7 h-7 flex items-center justify-center shrink-0 border-none border-gray-700 rounded-full group-hover:border-white transition-all">
+                    <FaFacebookF size={12} />
+                  </span>
+                  facebook.com/cognivanta
+                </a>
+                <a href="https://www.instagram.com/cognivanta_technologies/" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click_social', { network: 'Instagram' })} className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
+                  <span className="w-7 h-7 flex items-center justify-center shrink-0 border-none border-gray-700 rounded-full group-hover:border-white transition-all">
+                    <FaInstagram size={12} />
+                  </span>
+                  instagram.com/cognivanta_technologies
+                </a>
+          {/* Contact + Social rows */}
+          <div className="flex flex-col gap-2.5 mt-2">
+
+            {/* Email */}
+            {/* <a href="mailto:hr.cognivanta@gmail.com" className="flex gap-2.5 items-center text-sm text-gray-400 hover:text-white transition-colors group">
+              <span className="w-7 h-7 flex items-center justify-center shrink-0 border-none border-gray-700 rounded-full group-hover:border-white transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2" /><path d="m2 7 10 7 10-7" />
+                </svg>
+              </span>
+              hr.cognivanta@gmail.com
+            </a> */}
 
             
 
@@ -158,21 +194,21 @@ const Footer: React.FC = () => {
             <div className='flex flex-col items-left'>
               {/* <p className='text-sm text-gray-400 hover:text-white transition-colors group'>Follow us on</p> */}
               <div className='flex gap-6'>
-                <a href="https://www.linkedin.com/in/cognivanta-technologies-834178364/" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click_social', { network: 'LinkedIn' })} className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
-                  <span className="w-7 h-7 flex items-center justify-center shrink-0 border border-gray-700 rounded-full group-hover:border-white transition-all">
+                {/* <a href="https://www.linkedin.com/in/cognivanta-technologies-834178364/" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click_social', { network: 'LinkedIn' })} className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
+                  <span className="w-7 h-7 flex items-center justify-center shrink-0 border-none border-gray-700 rounded-full group-hover:border-white transition-all">
                     <FaLinkedinIn size={12} />
                   </span>
                 </a>
                 <a href="https://www.facebook.com/profile.php?id=61575358813487" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click_social', { network: 'Facebook' })} className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
-                  <span className="w-7 h-7 flex items-center justify-center shrink-0 border border-gray-700 rounded-full group-hover:border-white transition-all">
+                  <span className="w-7 h-7 flex items-center justify-center shrink-0 border-none border-gray-700 rounded-full group-hover:border-white transition-all">
                     <FaFacebookF size={12} />
                   </span>
                 </a>
                 <a href="https://www.instagram.com/cognivanta_technologies/" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click_social', { network: 'Instagram' })} className="flex items-center gap-2.5 text-sm text-gray-400 hover:text-white transition-colors group">
-                  <span className="w-7 h-7 flex items-center justify-center shrink-0 border border-gray-700 rounded-full group-hover:border-white transition-all">
+                  <span className="w-7 h-7 flex items-center justify-center shrink-0 border-none border-gray-700 rounded-full group-hover:border-white transition-all">
                     <FaInstagram size={12} />
                   </span>
-                </a>
+                </a> */}
               </div>
 
             </div>
