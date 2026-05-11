@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
     <div className="flex flex-col uppercase gap-y-1.5 pb-20 text-center items-center">
       <p className="text-lg md:text-xl font-nobile font-light pb-[1.5rem] tracking-[0.25em] opacity-80">OUR VISION</p>
       <div
-        className="md:w-[70%] w-[95%] flex justify-center flex-wrap gap-x-[1rem] uppercase text-4xl
+        className="md:w-[70%] w-[95%] flex justify-center flex-wrap gap-x-[0.35rem] sm:gap-x-[0.5rem] md:gap-x-[1rem] uppercase text-xl sm:text-2xl md:text-3xl
           font-bold"
       >
         {heroDesWords.map((word, index) => {
