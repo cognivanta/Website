@@ -131,7 +131,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ data, index, totalCount, prev
                     {isLastSection && (
                         <div onClick={() => navigate('/contact')} className="cursor-pointer mt-8 md:mt-16 w-full shrink-0">
                             <a className="inline-block pt-5 w-full group items-center transition-all duration-300">
-                                <h2 className="text-center text-6xl uppercase font-bold tracking-tight border-b-4 lg:border-b-8 border-transparent group-hover:border-current transition-all duration-300">
+                                <h2 className="text-center text-2xl sm:text-2xl md:text-6xl uppercase font-bold tracking-tight border-b-4 lg:border-b-8 border-transparent group-hover:border-current transition-all duration-300">
                                     GET IN TOUCH
                                 </h2>
                             </a>
