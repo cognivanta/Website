@@ -66,7 +66,7 @@ const AboutCard: React.FC<AboutCardProps> = ({ data, index }) => {
             <p key={i}>{line}</p>
           ))}
         </div>
-        <div className="font-nobile text-justify break-words text-subtext
+        <div className="font-nobile md:text-justify break-words text-subtext
             text-sm md:4xl font-light 
             sm: pt-[2rem]"
         >
